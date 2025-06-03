@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>관리 시스템</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="main-front-container">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>관리 시스템</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="active" data-menu="main">
+          <i class="fas fa-home menu-icon"></i>
+          <span>메인 페이지</span>
+        </li>
+        <li data-menu="getbyshop">
+          <i class="fas fa-shopping-cart menu-icon"></i>
+          <span>쇼핑몰 수집</span>
+        </li>
+        <li data-menu="list">
+          <i class="fas fa-table menu-icon"></i>
+          <span>상품 목록</span>
+        </li>
+        <li data-menu="sourcing">
+          <i class="fas fa-info-circle menu-icon"></i>
+          <span>소싱 결과</span>
+        </li>
+        <li data-menu="processing">
+          <i class="fas fa-cogs menu-icon"></i>
+          <span>가공 설정 및 진행</span>
+        </li>
+        <li data-menu="brandban">
+          <i class="fas fa-ban menu-icon"></i>
+          <span>금지브랜드 검수</span>
+        </li>
+        <li data-menu="category">
+          <i class="fas fa-sitemap menu-icon"></i>
+          <span>카테고리 매핑</span>
+        </li>
+        <li data-menu="categoryadviser">
+          <i class="fas fa-search menu-icon"></i>
+          <span>카테고리 어드바이저</span>
+        </li>
+        <li data-menu="pre_register">
+          <i class="fas fa-clipboard-check menu-icon"></i>
+          <span>사전 등록 관리</span>
+        </li>
+        <li data-menu="register">
+          <i class="fas fa-upload menu-icon"></i>
+          <span>상품 등록</span>
+        </li>
+        <li data-menu="logs">
+          <i class="fas fa-list menu-icon"></i>
+          <span>로그</span>
+        </li>
+      </ul>
+    </div>
+    <div class="content" id="content">
+      <!-- 여기에 콘텐츠가 동적으로 로드됩니다 -->
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "name": "building",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "imgTrans_divide": "nodemon test/imgTrans_divide.js",
+    "createschema": "nodemon test/unit_test/register/createschema.js",
+    "naver_test_register": "nodemon src/services/connect_naver/naver_register_success.js",
+    "test": "nodemon test.js",
+    "test2": "nodemon test2.js",
+    "test3": "node test3.js",
+    "test_naver_auth": "nodemon test/api_test/naver_auth.js",
+    "test_naver_api": "nodemon test/api_test/naver_api_test.js",
+    "checkip": "nodemon test/checkip.js",
+    "s3test": "nodemon s3test/test1.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.787.0",
+    "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "form-data": "^4.0.2",
+    "glob": "^11.0.1",
+    "lru-cache": "^11.0.2",
+    "multer": "^1.4.5-lts.2",
+    "mysql2": "^3.12.0",
+    "open": "^10.1.0",
+    "openai": "^4.87.3",
+    "sharp": "^0.33.5",
+    "tmp": "^0.2.3",
+    "tunnel": "^0.0.6"
+  },
+  "type": "module",
+  "devDependencies": {
+    "axios-mock-adapter": "^2.1.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9"
+  }
+}

@@ -1,0 +1,49 @@
+productid 
+sourcing_completed 
+preprocessing_completed 
+brand_banned 
+shop_banned 
+seller_banned 
+discarded 
+category_mapping_required 
+is_registrable 
+registered 
+coopang_registered 
+naver_registered 
+created_at 
+updated_at 
+testcode
+
+---- 상태 정리------
+등록가능상품: 
+네이버등록실패상품: naver_register_failed=true
+네이버등록성공상품: naver_registered+registered=true
+
+-----메인페이지 상품정보------
+sourcing_completed = TRUE 소싱완료 
+preprocessing_completed = TRUE 가공완료
+is_registrable = TRUE 등록가능
+registered = TRUE 등록완료
+category_mapping_required = TRUE 카테고리 매핑 필요
+discarded = TRUE 판매전 폐기/오류 
+
+
+
+
+----- 네이버 등록 status_code 값 정의 -----
+100: 등록 성공 (정상 등록 완료)
+0: 기본 오류 (분류되지 않은 오류)
+40: 요청 형식 오류 (API 요청 형식 불량)
+41: 인증 오류 (토큰 만료, 인증 실패)
+43: 권한 오류 (API 접근 권한 없음)
+44: 리소스 찾을 수 없음 (필요한 리소스 없음)
+45: 메소드 오류 (지원하지 않는 요청 메소드)
+49: 요청 한도 초과 (API 호출 제한 초과)
+50: 데이터 준비 오류 (상품 정보 준비 실패)
+51: 카테고리 매핑 오류 (카테고리 정보 불일치) 
+52: 이미지 오류 (이미지 처리 실패)
+53: 옵션 처리 오류 (상품 옵션 처리 실패)
+60: 인증 토큰 획득 실패 (API 인증 과정 실패)
+70: 네이버 API 서버 오류 (네이버 측 서버 문제)
+80: 네이버 상품 등록 거부 (네이버 측에서 상품 등록 거부)
+90: 네이버 응답 처리 실패 (응답 파싱 오류)

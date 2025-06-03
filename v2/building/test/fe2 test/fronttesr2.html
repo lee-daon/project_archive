@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>테스트 프론트엔드</title>
+</head>
+<body>
+  <h1>테스트 데이터 전송</h1>
+  <p>아래 버튼을 클릭하면 미리 정의된 테스트 데이터가 서버에 전송됩니다.</p>
+  <button id="sendDataBtn">데이터 전송</button>
+
+  <script src="testdata.js"></script>
+  <script>
+    //서버랑 연결-테스트용
+    document.getElementById('sendDataBtn').addEventListener('click', async () => {
+      try {
+        const response = await fetch('http://localhost:3000/src/detailparselist', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(detailpageparsetarget)
+        });
+
+        const result = await response.json();
+        console.log('서버 응답:', result);
+        alert('데이터 전송 성공: ' + JSON.stringify(result));
+      } catch (error) {
+        console.error('데이터 전송 에러:', error);
+        alert('데이터 전송 실패');
+      }
+    });
+  </script>
+</body>
+</html>

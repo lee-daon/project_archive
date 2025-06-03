@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>페이지 전송 팝업</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 280px;
+    }
+    label {
+      margin-right: 5px;
+    }
+    input[type="number"] {
+      width: 60px;
+    }
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    /* 버튼 클릭 시 active 클래스가 추가되어 색상이 변함 */
+    .active {
+      background-color: lightgreen;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+    .toggle-container {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <label for="pageCount">페이지 개수 (최대 100):</label>
+    <input type="number" id="pageCount" min="1" max="100" value="1">
+  </div>
+  <div>
+    <button id="sendData">데이터전송</button>
+    <button id="retryButton">재시도</button>
+  </div>
+  <div class="toggle-container">
+    <label for="toggleSwitch">on/off:</label>
+    <!-- 체크된 상태이면 on -->
+    <input type="checkbox" id="toggleSwitch" checked>
+  </div>
+  <div id="errorMessage" class="error"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

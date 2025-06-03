@@ -1,0 +1,125 @@
+{
+  "initialJson":{
+  "productId": "14971809051",
+  "productName": "가정용 미세먼지 제거 공기청정기",
+  "naverCategoryId": 50002543,
+  "brandName": "원대/Yuanda",
+  "keywords": [
+    "알레르기제거",
+    "새집증후군제거",
+    "병균살균",
+    "가정용공기청정기",
+    "미세먼지제거",
+    "포름알데히드제거",
+    "실내공기질개선",
+    "공기정화",
+    "미세먼지청정",
+    "꽃가루제거"
+  ],
+  "images": {
+    "representativeImage": {
+      "url": "https://shop-phinf.pstatic.net/20250416_220/17447754382289HkU1_JPEG/15193808284042344_671916220.jpg"
+    },
+    "optionalImages": [
+      {
+        "url": "https://shop-phinf.pstatic.net/20250416_20/1744775438576zxPIu_JPEG/15193808633327242_248789786.jpg"
+      },
+      {
+        "url": "https://shop-phinf.pstatic.net/20250416_162/1744775438953gIlGy_JPEG/15193809008676503_467006051.jpg"
+      },
+      {
+        "url": "https://shop-phinf.pstatic.net/20250416_278/1744775439342RADSQ_JPEG/15193809396557929_699527713.jpg"
+      },
+      {
+        "url": "https://shop-phinf.pstatic.net/20250417_175/17448733479964zBbi_JPEG/79006211135102592_846866829.jpg"
+      }
+    ]
+  },
+  "contents": "\n  <div class=\"product-detail-container\" style=\"font-family: 'Noto Sans KR', sans-serif;\">\n    <div class=\"product-attributes\"><h3>상품 정보</h3><table style=\"width:100%; border-collapse: collapse; margin-top: 10px;\"><tbody><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">브랜드</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">远大</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">모델</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">TA1000</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">기능</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">살균, 포름알데히드 제거</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">전원 방식</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">AC 전원</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">색상 분류</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">흰색</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">적용 면적</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">30m^2-50m^2</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">에너지 효율 등급</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">1등급</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">제어 방식</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">버튼식</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">공기 정화 제품 유형</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">공기청정기</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">풍량</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">1000 立方米/시간 이상, 1000立方米/시간</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">필터 유형</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">필터 없음</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">크기</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">320x230x848mm</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">스마트 유형</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">기타</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">소음</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">46-64dB</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">미세먼지 CADR 값</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">428.4立方米/시간</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">포름알데히드 CADR 값</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">100.1立方米/시간</td>\n      </tr><tr>\n        <th style=\"padding: 8px; text-align: left; border: 1px solid #ddd; background-color: #f2f2f2;\">보증 기간</th>\n        <td style=\"padding: 8px; text-align: left; border: 1px solid #ddd;\">24개월</td>\n      </tr></tbody></table></div>\n    <div class=\"product-description\" style=\"margin: 20px 0;\">\n      <h3>상품 상세</h3>\n      <p>상품에 대한 자세한 정보는 아래 이미지를 참고해주세요.</p>\n    </div>\n    <div class=\"product-detail-images\" style=\"margin-top: 20px;\"><div style=\"margin-bottom: 10px;\"><img src=\"https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/aee06d3a-1fe7-4c32-96ee-4cfab900c73d.jpg\" style=\"max-width:100%;\" /></div><div style=\"margin-bottom: 10px;\"><img src=\"https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/86119e62-9799-4d6a-858c-90e61dc0c28c.jpg\" style=\"max-width:100%;\" /></div><div style=\"margin-bottom: 10px;\"><img src=\"https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/085446f4-7f70-4941-a766-93df3a641edb.jpg\" style=\"max-width:100%;\" /></div><div style=\"margin-bottom: 10px;\"><img src=\"https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/8bd0b950-b701-4281-8998-65977e25ed55.jpg\" style=\"max-width:100%;\" /></div><div style=\"margin-bottom: 10px;\"><img src=\"https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/1bd94b25-3772-4faf-832b-77f44aeab233.jpg\" style=\"max-width:100%;\" /></div><div style=\"margin-bottom: 10px;\"><img src=\"https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/1dba3b6e-3fdb-429c-ad45-df6081b897a1.jpg\" style=\"max-width:100%;\" /></div></div>\n  </div>",
+  "optionSchema": {
+    "1627207": "색상"
+  },
+  "variants": [
+    {
+      "stockQuantity": 80,
+      "calculatedPrice": 3835650,
+      "cost": 2950500,
+      "optionNames": [
+        "흰색"
+      ]
+    },
+    {
+      "stockQuantity": 100,
+      "calculatedPrice": 3835650,
+      "cost": 2950500,
+      "optionNames": [
+        "빨간색"
+      ]
+    },
+    {
+      "stockQuantity": 250,
+      "calculatedPrice": 3835650,
+      "cost": 2950500,
+      "optionNames": [
+        "검정"
+      ]
+    },
+    {
+      "stockQuantity": 400,
+      "calculatedPrice": 3835650,
+      "cost": 2950500,
+      "optionNames": [
+        "녹색"
+      ]
+    },
+    {
+      "stockQuantity": 200,
+      "calculatedPrice": 3835650,
+      "cost": 2950500,
+      "optionNames": [
+        "파란색"
+      ]
+    }
+  ],
+  "discountRate": 20
+},
+"hostedImageData":  {
+  "descriptionImages": [
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/b7febc04-6770-4119-9321-be6119468d65.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/e99a0c61-89ac-4f1d-8258-51efa3037fb1.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/ea07bc08-153d-4c06-b113-c113b158773e.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/dec97876-9a6a-4325-9b8c-925e92a669d1.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/9a5a1eeb-21c0-4e24-8722-09b815e886a3.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/4a59f7d0-83df-450b-8224-0d4c4398086d.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/ea0dbdc2-5932-4aae-803d-c81b666f4269.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/fefeccd5-88a5-4b63-b460-270df894f6ec.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/8694ef2d-6f76-4161-be96-ec8903245315.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/fc6c0bd3-61ea-48cc-bd7c-d562b4ffee1c.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/ffb3fe80-c7f2-48cd-be6c-dce2334e8278.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/0cde0f15-fca5-4dc4-8830-582423e08643.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/dc4b49ed-dfb6-4925-8197-070d5dd9bc38.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/17302269-477e-44ce-be5e-687c568dcbdc.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/afaaec23-4476-43f2-8f3c-ca8080510d09.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/6833ad4b-5206-461a-81ee-3be671393960.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/e395aec3-d74f-45f4-bc16-cde231464a4a.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/4173b5e7-8ad0-4746-a77d-82d65eca8800.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/46efe3e7-464b-4dd5-8061-387aad0941cd.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/39817d69-cb1a-408e-bd39-5b671ee133cc.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/11c58963-9526-4df1-86da-600b51aa652e.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/793d087a-5e7a-448b-87ed-74e70f19a4d7.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/52526cf9-395d-4e49-99c0-f5d3362cafbd.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/817f425b-b9a0-4dc6-81a4-d749b415ab1c.jpg",
+    "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/8a9923c9-c46c-487d-ac0f-4a8870a480c9.jpg"
+  ],
+  "optionNamesWithImages": [
+    {
+      "name": "블랙 뱀띠해 한정 선물 세트",
+      "image": "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/5fe815da-db82-4a76-acc0-160ab4df90f3.jpg"
+    },
+    {
+      "name": "복합 필터*3개 (탈취/먼지) 기타 부품 문의",
+      "image": "https://ldoisldo.s3.ap-northeast-2.amazonaws.com/uploads/85c59bd1-835e-457f-bd70-73dccfdc5a46.jpg"
+    }
+  ]
+}
+}

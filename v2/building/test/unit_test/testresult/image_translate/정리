@@ -1,0 +1,15 @@
+0. 원본 이미지
+file:///C:/Users/leeda/AppData/Local/Temp/tmp-2120-kqqHn7xVcBOe/downloaded_image.png
+file:///C:\Users\leeda\AppData\Local\Temp\tmp-7016-PAklM5VQksKQ\downloaded_image.png
+
+1. stroke true인 경우 //외곽선(stroke) 비활성화 여부
+file:///C:/Users/leeda/AppData/Local/Temp/tmp-12440-RumH27JOLCWO/translated_image.png
+file:///C:\Users\leeda\AppData\Local\Temp\tmp-15932-rroS9OtwejCN\translated_image.png
+file:///C:/Users/leeda/AppData/Local/Temp/tmp-21172-tRoB3QmqW2Al/translated_image.png
+
+2. stroke false인 경우
+file:///C:/Users/leeda/AppData/Local/Temp/tmp-11748-1CR6b5O8w0FA/translated_image.png
+file:///C:/Users/leeda/AppData/Local/Temp/tmp-2120-kqqHn7xVcBOe/translated_image.png
+file:///C:/Users/leeda/AppData/Local/Temp/tmp-7016-PAklM5VQksKQ/translated_image.png
+
+결과 stroke false인 경우가 좀더 깔끔하게 잘 보임
