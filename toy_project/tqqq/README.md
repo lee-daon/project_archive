@@ -30,8 +30,8 @@ TQQQ와 다양한 자산을 조합한 포트폴리오의 성과를 분석하는 
 ## 설치 및 실행
 
 ```bash
-git clone https://github.com/lee-daon/tqqq-.git
-cd 'toy_project\tqqq는 돈이 될까\code'
+git clone https://github.com/lee-daon/project_archive.git
+cd 'toy_project\tqqq\code'
 npm install
 npm start
 ```
