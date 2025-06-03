@@ -1,0 +1,49 @@
+# Node.js 관련
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+
+# 환경 변수
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 로그 파일
+logs
+*.log
+
+# 운영체제 파일
+.DS_Store
+Thumbs.db
+
+# IDE 설정
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 빌드 디렉토리
+/dist
+/build
+
+# 캐시 디렉토리
+.cache/
+.npm/
+
+# 런타임 데이터
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# 기타 파일
+*.sublime-project
+*.sublime-workspace
+
+# 캐시 디렉토리
+.eslintcache
+.parcel-cache 
