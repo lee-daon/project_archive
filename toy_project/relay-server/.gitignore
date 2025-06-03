@@ -1,0 +1,17 @@
+# Node.js
+node_modules/
+
+
+# Environment variables
+.env
+
+
+# PM2
+.pm2/
+ecosystem.config.js
+
+# IDE
+.vscode/
+.idea/
+
+정보.txt
