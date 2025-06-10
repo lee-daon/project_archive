@@ -8,7 +8,7 @@
 
 ### 토이 프로젝트
 - [**IP 고정 릴레이 서버**](toy_project/relay-server/README.md)
-- [**나의 첫 번째 웹사이트**](toy_project/my-first-web-site-main/readme.md)
+- [**첫 번째 웹사이트**](toy_project/my-first-web-site-main/readme.md)
 - [**tqqq 포트폴리오 찾기**](toy_project/tqqq/README.md)
 
 ---
