@@ -43,16 +43,6 @@ API Server → OCR Worker → Processor → Preprocessing → Inpainting → Res
 
 **RTX 4050 환경**: 23장 처리 시 약 25초 소요 (첫 번째 결과까지 6초)
 
-## 기술 스택
-
-- **Container**: Docker, Docker Compose
-- **Queue**: Redis
-- **API**: FastAPI
-- **OCR**: PaddleOCR (SVTR_LCNet)
-- **Translation**: Google Gemini API
-- **Inpainting**: LaMa (Fast Fourier Convolution)
-- **GPU**: NVIDIA CUDA, FP16 최적화
-
 ## 실행 방법
 
 ### 1. 사전 준비
