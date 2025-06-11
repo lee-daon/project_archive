@@ -9,6 +9,7 @@
 - [**V1 - 첫 번째 크롤링 & 번역 앱**](v1/readme.md)
 
 ### 토이 프로젝트
+- [**누키 (Nukki) - 이미지 배경 제거 API**](toy_project/nukki/README.md)
 - [**IP 고정 릴레이 서버**](toy_project/relay-server/README.md)
 - [**첫 번째 웹사이트**](toy_project/my-first-web-site-main/readme.md)
 - [**tqqq 포트폴리오 찾기**](toy_project/tqqq/README.md)

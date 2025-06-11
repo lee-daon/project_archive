@@ -1,0 +1,11 @@
+curl -X POST \
+  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -F "file=@image.jpg" \
+  http://localhost:8080/api/remove-background \
+  --output result.png
+
+# Docker 이미지 빌드
+docker build -t rembg-api .
+
+# Docker 컨테이너 실행
+docker run -p 8080:8080 rembg-api

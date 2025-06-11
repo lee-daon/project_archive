@@ -1,0 +1,39 @@
+# Git files
+.git
+.gitignore
+
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+test.py
+test_*.py
+
+# Local development files
+*.log
+.env
+.env.local
+
+# Output images (test results)
+output_*.png
+result.png
+
+# Large model files (except the one we need)
+# u2net.onnx will be included as it's needed 
