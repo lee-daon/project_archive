@@ -1,5 +1,7 @@
 v1/prototype1.mp4
 v2/prototype2.mp4
+v3_image_translator/example1.mp4
+toy_project/nukki/nukki.mp4
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -162,3 +164,4 @@ logs/
 # V3 Image Translator specific
 v3_image_translator/image_translator_merged/workers/ocr_worker/models/
 v3_image_translator/image_translator_merged/workers/inpainting_worker/lama-fourier/models/
+
