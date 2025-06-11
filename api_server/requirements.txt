@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+redis
+opencv-python-headless # Pillow 대신 OpenCV 사용 (BGR 변환 용이)
+numpy
+python-multipart # FastAPI 파일 업로드용
+
+# 공유 메모리 사용 (Python 3.8+ 내장)
+# 만약 구형 Python 또는 다른 이유로 필요하다면:
+# posix_ipc # 리눅스/맥 전용
+# pywin32 # 윈도우 전용 (sysv_ipc 대안)

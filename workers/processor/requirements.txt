@@ -1,0 +1,5 @@
+redis>=4.6.0 # 버전 명시
+numpy>=1.20.0
+opencv-python-headless>=4.5.0 # GUI 불필요 시 headless 버전 권장
+# core 모듈은 Dockerfile에서 COPY 하므로 여기에 명시할 필요 없음
+aiohttp # 추가

@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+별 말이 없으면 큐는 redis큐이고, 선입선출은 RPUSH / BLPOP 로 구현할꺼야.
