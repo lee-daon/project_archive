@@ -1,0 +1,39 @@
+# Base Python image
+FROM python:3.10
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies required by OpenCV
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libsm6 \
+    libxrender1 \
+    libxext6 \
+    libgomp1 \
+ && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+RUN pip install --no-cache-dir "redis==4.6.0" aioredis>=2.0.0 numpy>=1.20.0 opencv-python-headless>=4.5.0 asyncio
+
+# Dependency validation
+RUN pip check
+
+# Check installed versions
+RUN python -c "import redis; print(f'Installed redis version: {redis.__version__}')"
+RUN python -c "import numpy; print(f'Installed numpy version: {numpy.__version__}')"
+RUN python -c "import cv2; print(f'Installed OpenCV version: {cv2.__version__}')"
+
+# Copy the core module and the worker script
+COPY ./core /app/core
+COPY ./workers/preprocessing_worker/worker.py /app/worker.py
+
+# Set environment variables (optional, can be overridden in docker-compose)
+ENV PYTHONUNBUFFERED=1
+ENV LOG_LEVEL=INFO
+ENV REDIS_URL=redis://redis:6379
+ENV PYTHONPATH=/app
+
+# Command to run the worker
+CMD ["python", "/app/worker.py"]

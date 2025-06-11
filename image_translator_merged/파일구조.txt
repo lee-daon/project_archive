@@ -1,0 +1,71 @@
+image_translate_pipeline/
+│
+├── api_server/             # 1. Producer: FastAPI 기반 HTTP 요청 처리, UUID 생성, SHM 저장, OCR 작업 큐잉, SSE로 결과 스트리밍
+│   ├── main.py             # FastAPI 앱, 엔드포인트 (/translate, /stream-result/{request_id})
+│   ├── requirements.txt    # Python 의존성 (FastAPI, Uvicorn, Redis, OpenCV, NumPy)
+│   ├── modules/            # 핵심 로직 모듈
+│   │   ├── config.py         # 설정 (Redis, SHM, 큐 이름 등)
+│   │   ├── image_processor.py # 이미지 바이트 -> NumPy 배열 변환
+│   │   ├── redis_client.py    # Redis 연결 및 작업 큐잉/결과 대기 (BLPOP) 로직
+│   │   ├── request_handler.py # 요청 처리 플로우 (이미지 처리, SHM 저장, 큐잉)
+│   │   └── shm_manager.py     # 공유 메모리 생성 및 관리
+│   ├── Dockerfile          # FastAPI 서버 빌드용 Dockerfile
+│   └── __pycache__/      # (자동 생성)
+│
+├── workers/
+│   ├── ocr_worker/         # 2. Worker 1 (OCR): OCR 요청 처리, Processor 요청 큐잉
+│   │   ├── worker.py       # Redis 큐 리스닝 및 OCR 처리 로직
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   ├── processor/          # 3. Worker 2 (가공): 마스크 생성, 번역 요청, 전처리 요청 큐잉
+│   │   ├── worker.py       # Redis 큐 리스닝, 마스크 생성, 번역 API 호출 로직
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   ├── preprocessing_worker/ # 4. Worker 3 (전처리): 이미지 디노이징, 크기 조정, 패딩 처리
+│   │   ├── worker.py       # Redis 큐 리스닝, CPU 기반 이미지 전처리 로직
+│   │   ├── readme.md       # 워커 사용 및 기능 설명
+│   │   ├── requirements.txt # 필요한 라이브러리 목록
+│   │   └── Dockerfile
+│   │
+│   ├── inpainting_worker/  # 5. Worker 4 (인페인팅): 전처리된 이미지로 LaMa 모델 추론
+│   │   ├── worker.py       # Redis 큐 리스닝 및 LaMa 모델 추론 처리 로직
+│   │   ├── Readme.md       # 워커 사용 및 기능 설명
+│   │   ├── lama/             # 제공된 LaMa 코드 (볼륨 마운트 대상)
+│   │   │   ├── bin/
+│   │   │   │   └── inference.py # 제공된 LaMa 추론 스크립트
+│   │   │   └── ... (LaMa 모델 및 기타 필요 파일)
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   ├── result_checker/     # 6. Worker 5 (Result Checker): 번역/인페인팅 결과 확인 후 Rendering 요청 큐잉
+│   │   ├── worker.py       # Redis 키 이벤트/주기적 검사, 렌더링 작업 생성 로직
+│   │   ├── requirements.txt
+│   │   └── Dockerfile
+│   │
+│   └── rendering_worker/   # 7. Worker 6 (Rendering): Rendering 요청 처리, 최종 결과 저장
+│       ├── modules/          # 렌더링 관련 모듈
+│       │   ├── selectTextColor.py # 텍스트 색상 선택
+│       │   ├── textsize.py      # 텍스트 크기 계산
+│       │   └── fonts/           # (폰트 파일 저장 디렉토리)
+│       ├── worker.py         # Redis 큐 리스닝, 렌더링 로직, 결과 저장
+│       ├── requirements.txt
+│       └── Dockerfile
+│
+├── core/                   # 공통 모듈: 설정, Redis 클라이언트, SHM 관리, 유틸리티 함수 등
+│   ├── config.py
+│   ├── redis_client.py
+│   ├── shm_manager.py
+│   └── utils.py
+│
+├── logs/                   # 서비스별 로그 파일 저장 디렉토리
+│
+├── tests/                  # 단위 테스트 및 통합 테스트 코드
+│   ├── unit/
+│   └── integration/
+│
+├── docker-compose.yml      # Docker Compose 설정 파일 (전체 서비스 통합 실행용)
+├── redis_queue_schema.js   # 레디스 큐의 스키마를 기록해놓는 파일
+├── .env                    # api키 보관
+└── README.md               # 프로젝트 설명, 설정 방법, 실행 가이드 문서

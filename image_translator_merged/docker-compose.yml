@@ -1,0 +1,197 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes # Enable persistence (optional)
+
+  api_server:
+    build:
+      context: ./api_server
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=INFO
+      - API_HOST=0.0.0.0 # Ensure API server binds correctly inside the container
+      - API_PORT=8000
+    volumes:
+      - ./core:/app/core # Mount core module for api_server
+    depends_on:
+      - redis
+    ipc: host # Required for shared memory access between containers/host
+
+  ocr_worker:
+    build:
+      context: .
+      dockerfile: ./workers/ocr_worker/Dockerfile
+    volumes:
+      - ./workers/ocr_worker/worker.py:/app/worker.py  # worker.py만 개발용으로 마운트
+      - ./core:/app/core           # core 로컬 코드를 컨테이너 /app/core에 마운트
+      # 모델 디렉토리는 마운트하지 않음 (Dockerfile에서 복사된 모델 사용)
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all # Or 'all' or specific device IDs e.g., device_ids: ['0', '1']
+              capabilities: [gpu]
+    # command: ["sh", "-c", "ls -l /app && echo '---' && python --version && echo '--- trying python /app/worker.py ---' && python /app/worker.py"]
+
+  processor:
+    build:
+      context: .
+      dockerfile: ./workers/processor/Dockerfile
+    volumes:
+      - ./workers/processor:/app
+      - ./core:/app/core
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=INFO
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    ipc: host
+
+  preprocessing_worker:
+    build:
+      context: .
+      dockerfile: ./workers/preprocessing_worker/Dockerfile
+    volumes:
+      - ./workers/preprocessing_worker:/app
+      - ./core:/app/core
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=INFO
+      - PYTHONPATH=/app
+      - INPAINTING_BATCH_SIZE_SHORT=4
+      - INPAINTING_BATCH_SIZE_LONG=2
+    depends_on:
+      - redis
+      - processor
+    ipc: host
+    # 이 서비스는 GPU가 필요하지 않음 (CPU 작업만 수행)
+
+  inpainting_worker:
+    build:
+      context: .
+      dockerfile: ./workers/inpainting_worker/Dockerfile
+    volumes:
+      - ./core:/app/core  # 코어 모듈 마운트
+      - ./workers/inpainting_worker/worker.py:/app/workers/inpainting_worker/worker.py  # 워커 코드만 마운트 (개발용)
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=INFO
+      - PYTHONPATH=/app:/app/lama
+      - LAMA_CONFIG_PATH=/model/config.yaml
+      - LAMA_CHECKPOINT_PATH=/model/models/best.ckpt
+      - USE_CUDA=1
+      - USE_FP16=1
+      - INPAINTING_BATCH_SIZE_SHORT=4
+      - INPAINTING_BATCH_SIZE_LONG=2
+    depends_on:
+      - redis
+      - preprocessing_worker
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  # inpainting_migan_worker: ## 이거 문제가 512px이미지만 처리가능함.. 1024px이미지는 처리 안됨.., 아님 업스케일링을 포함한 파이프라인 짜야 함 
+  #   build:
+  #     context: ./workers/inpainting-migan-worker
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./core:/app/core # 코어 모듈 마운트
+  #     - ./src:/app/src   # src 모듈 마운트 추가
+  #   # working_dir: /workspace # Dockerfile의 WORKDIR 설정을 따르도록 제거
+  #   environment:
+  #     - REDIS_URL=redis://redis:6379
+  #     - LOG_LEVEL=INFO
+  #     - PYTHONPATH=/workspace:/app # PYTHONPATH 수정: /app 을 추가하여 /app/core 및 /app/src 를 찾도록 함
+  #     # 추가 환경 변수 설정 (예: 모델 경로 등)
+  #   depends_on:
+  #     - redis
+  #     - preprocessing_worker # 이전 단계 워커에 따라 변경될 수 있음
+  #   ipc: host
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             count: 1 # GPU 사용 개수 (필요시 조절)
+  #             capabilities: [gpu]
+
+  result_checker:
+    build:
+      context: .
+      dockerfile: ./workers/result_checker/Dockerfile
+    volumes:
+      - ./workers/result_checker:/app
+      - ./core:/app/core
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=DEBUG # 디버깅을 위해 DEBUG로 설정
+      - PYTHONPATH=/app
+    depends_on:
+      - redis
+    ipc: host # 다른 워커들과 일관성 유지 (혹시 모를 간접적 SHM 사용 대비)
+
+  rendering_worker:
+    build:
+      context: . # 빌드 컨텍스트를 프로젝트 루트로 변경
+      dockerfile: ./workers/rendering_worker/Dockerfile # Dockerfile 경로 명시
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=DEBUG
+      - PYTHONPATH=/app # PYTHONPATH 추가
+    volumes:
+      - ./core:/app/core # 코어 모듈 마운트
+      - ./workers/rendering_worker:/app # <<<--- 워커 코드 마운트 주석 처리 (테스트 목적)
+      # - /path/on/host/for/fonts:/usr/share/fonts # 필요한 경우 폰트 볼륨 추가
+      # - /path/on/host/for/output:/app/output # 결과물 저장을 위한 볼륨 추가 (옵션)
+    depends_on:
+      - redis
+    ipc: host # 다른 워커와 동일하게 설정 (필요시)
+
+  returner:
+    build:
+      context: .
+      dockerfile: ./return/dockerfile
+    volumes:
+      - ./return:/app/return
+      - ./core:/app/core
+      - ./output:/app/output  # 출력 디렉토리 마운트
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=DEBUG
+      - PYTHONPATH=/app
+      - OUTPUT_DIR=/app/output/translated
+      - JPEG_QUALITY=80
+    depends_on:
+      - redis
+      - rendering_worker
+    ipc: host
+
+volumes:
+  redis_data: # Persist Redis data
+
+# Optional: Define a network if needed, otherwise docker-compose uses a default one
+# networks:
+#   app_network:
+#     driver: bridge
