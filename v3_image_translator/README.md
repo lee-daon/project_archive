@@ -33,6 +33,10 @@ Redis 큐-워커 패턴을 활용하여 OCR, 번역, Inpainting, 렌더링 작�
 
 ## 시스템 구성
 
+### 기본 설계도
+![기본 설계도](KakaoTalk_20250612_224106169_17.jpg)
+
+### 간략한 플로우
 ```
 API Server → OCR Worker → Processor → Preprocessing → Inpainting → Result Checker → Rendering → Return
      ↓           ↓            ↓           ↓             ↓              ↓             ↓         ↓
