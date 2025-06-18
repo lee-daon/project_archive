@@ -1,4 +1,4 @@
-# V3 Image Translation Pipeline (Archived)
+# V3.0_Image Translation Pipeline (Archived)
 
 ## 시연 예제
 **데모 영상**: [https://pub-e396b742f1ae46678c7a5692530400d7.r2.dev/example1.mp4](https://pub-e396b742f1ae46678c7a5692530400d7.r2.dev/example1.mp4)
@@ -12,7 +12,7 @@ Redis 큐-워커 패턴을 활용하여 OCR, 번역, Inpainting, 렌더링 작�
 
 - **비용 문제**: GPU VM 운영 비용이 과도하게 높음
 - **아키텍처 전환**: 서버리스 GPU 솔루션으로 전환 결정
-- **유지보수 부담**: 다중 컨테이너 환경의 복잡성
+- **유지보수 부담**: 다중 컨테이너 환경의 복잡성(컨테이너 통합 예정 )
 
 ## 주요 특징
 
