@@ -7,6 +7,7 @@
   - [이미지 번역 파이프라인 (Archived)](v3_image_translator/README.md)
 - [**V2 - 구조화된 상품 소싱 & 등록 시스템**](v2/README.md)
 - [**V1 - 첫 번째 크롤링 & 번역 앱**](v1/readme.md)
+- [**v0 - 어떠한 근거로 시작한 프로젝트인지, 전체 프로젝트 요약**](start.md)
 
 ### 토이 프로젝트
 - [**누키 (Nukki) - 이미지 배경 제거 API**](toy_project/nukki/README.md)
