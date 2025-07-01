@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes # Enable persistence (optional)
+
+  ocr_worker:
+    build:
+      context: .
+      dockerfile: ./workers/ocr_worker/Dockerfile
+    volumes:
+      - ./workers/ocr_worker/worker.py:/app/worker.py
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=DEBUG
+      - MAX_CONCURRENT_DOWNLOADS=5
+      - MAX_PENDING_IMAGES=10
+      - DOWNLOAD_COOLDOWN=5
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  # 완전 통합 파이프라인 워커: OCR 후처리 → 마스크 생성 → 번역 → 인페인팅 → 렌더링 → 호스팅 큐 전달
+  unified_worker:
+    build:
+      context: .
+      dockerfile: ./workers/operate_worker/Dockerfile
+    volumes:
+      - ./workers/operate_worker/core:/app/core
+      - ./workers/operate_worker/worker.py:/app/workers/operate_worker/worker.py
+      - ./workers/operate_worker/logic:/app/workers/operate_worker/logic
+      - ./workers/operate_worker/rendering_worker:/app/workers/operate_worker/rendering_worker
+      - ./output:/app/output
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=INFO
+      - PYTHONPATH=/app:/app/lama
+      - LAMA_CONFIG_PATH=/model/config.yaml
+      - LAMA_CHECKPOINT_PATH=/model/models/best.ckpt
+      - USE_CUDA=1
+      - USE_FP16=1
+      - INPAINTING_BATCH_SIZE_SHORT=4
+      - INPAINTING_BATCH_SIZE_LONG=2
+      - RESIZE_TARGET_HEIGHT=1024
+      - RESIZE_TARGET_WIDTH=1024
+      - RENDERING_OUTPUT_DIR=/app/output/rendered
+      - PYTHONUNBUFFERED=1
+      - R2_ENDPOINT=${R2_ENDPOINT}
+      - CLOUDFLARE_ACCESS_KEY_ID=${CLOUDFLARE_ACCESS_KEY_ID}
+      - CLOUDFLARE_SECRET_KEY=${CLOUDFLARE_SECRET_KEY}
+      - CLOUDFLARE_TOKEN=${CLOUDFLARE_TOKEN}
+      - R2_BUCKET_NAME=${R2_BUCKET_NAME}
+      - R2_DOMAIN=${R2_DOMAIN}
+    env_file:
+      - .env  # GEMINI_API_KEY 등 번역 관련 환경 변수 포함
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  result_worker:
+    build:
+      context: ./result
+      dockerfile: dockerfile
+    volumes:
+      - ./output:/app/output
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=INFO
+      - HOSTING_TASKS_QUEUE=img:translate:success
+      - OUTPUT_DIR=/app/output/translated
+      - JPEG_QUALITY=80
+    depends_on:
+      - redis
+    ipc: host
+
+volumes:
+  redis_data: # Redis 데이터 영속성을 위한 볼륨
+
+# Optional: Define a network if needed, otherwise docker-compose uses a default one
+# networks:
+#   app_network:
+#     driver: bridge

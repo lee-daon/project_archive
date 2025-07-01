@@ -1,0 +1,31 @@
+# torch==1.8.0
+# torchvision==0.9.0
+numpy<2.0
+wheel
+pyyaml>=5.1,!=5.4.*
+tqdm
+easydict==1.9.0
+scikit-image==0.17.2
+scikit-learn==0.24.2
+opencv-python
+tensorflow
+joblib
+matplotlib
+pandas
+albumentations==0.5.2
+hydra-core==1.1.0
+pytorch-lightning==1.2.9
+tabulate
+kornia==0.5.0
+webdataset
+packaging
+scikit-learn==0.24.2
+wldhx.yadisk-direct
+typing-extensions>=4.1.0,<4.6.0
+
+# Processor 요구사항 통합 (Dockerfile에서 별도 설치하는 것들 제외)
+aiohttp==3.8.6
+Pillow>=9.0.0
+requests>=2.28.0
+# redis, aioredis, omegaconf는 Dockerfile에서 별도 설치
+# opencv-python-headless>=4.5.0 - 이미 opencv-python이 있으므로 생략 
