@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "data": {
+    "notices": [
+      {
+        "noticeCategoryName": "기타 재화",
+        "noticeCategoryDetailName": "품명 및 모델명",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "기타 재화",
+        "noticeCategoryDetailName": "인증/허가 사항",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "기타 재화",
+        "noticeCategoryDetailName": "제조국(원산지)",
+        "content": "중국"
+      },
+      {
+        "noticeCategoryName": "기타 재화",
+        "noticeCategoryDetailName": "제조자(수입자)",
+        "content": "한국"
+      },
+      {
+        "noticeCategoryName": "기타 재화",
+        "noticeCategoryDetailName": "소비자상담 관련 전화번호",
+        "content": "02-1234-5678"
+      }
+    ]
+  },
+  "message": "카테고리 77426 공지사항 추출 성공"
+}

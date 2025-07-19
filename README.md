@@ -6,6 +6,7 @@
 - [**V3 - SaaS MVP (모듈화 + 워커 분리)**](v3/README.md)
   - [이미지 번역 파이프라인 (Archived)](v3_image_translator/README.md)
   - [이미지 번역 파이프라인v2 (Archived)](v3_image_translator_v2/README.md)
+  - [mvp 최초버전 ](v3/v0.0.0/readme.md)
 - [**V2 - 구조화된 상품 소싱 & 등록 시스템**](v2/README.md)
 - [**V1 - 첫 번째 크롤링 & 번역 앱**](v1/readme.md)
 - [**v0 - 어떠한 근거로 시작한 프로젝트인지, 전체 프로젝트 요약**](start.md)

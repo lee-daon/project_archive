@@ -1,0 +1,390 @@
+# 트래킹 API 명세서
+
+이 문서는 트래킹 시스템의 API 사용법을 설명합니다.
+
+---
+
+## 1. 트래킹 URL
+
+이 엔드포인트는 특정 사용자와 마켓에 대한 상품 조회를 추적합니다. 이벤트를 기록하고 1x1 픽셀 크기의 검은색 GIF 이미지를 반환합니다. 실제 데이터 처리는 빠른 응답을 보장하기 위해 비동기적으로 처리됩니다.
+
+- **URL 형식**: `GET /{market}/{userId}/{productId}/{groupId}`
+- **메서드**: `GET`
+
+### URL 파라미터
+
+| 파라미터    | 타입    | 필수 여부 | 설명                                                                         |
+|-------------|---------|-----------|------------------------------------------------------------------------------|
+| `market`    | 문자열  | 예        | 마켓 채널. `cou`, `nav`, `ele`, `acu`, `gma` 중 하나여야 합니다.              |
+| `userId`    | 정수    | 예        | 사용자 ID.                                                                   |
+| `productId` | 정수    | 예        | 조회된 상품의 ID.                                                            |
+| `groupId`   | 정수    | 예        | 그룹 ID.                                                                     |
+
+### 요청 예시
+
+```
+GET /cou/12345/67890/123
+Host: <your-worker-url>
+```
+
+### 성공 응답
+
+- **상태 코드**: `200 OK`
+- **Content-Type**: `image/gif`
+- **본문**: 1x1 픽셀 크기의 검은색 GIF 이미지.
+
+---
+
+## 2. 조회 API
+
+이 엔드포인트는 지정된 필터를 기반으로 집계된 상품 조회 데이터를 가져옵니다.
+
+- **URL**: `GET /api/views`
+- **메서드**: `GET`
+
+### 헤더
+
+| 헤더            | 타입   | 필수 여부 | 설명                                                                                   |
+|---------------|--------|-----------|----------------------------------------------------------------------------------------|
+| `Authorization` | 문자열 | 예        | `Bearer <API_SECRET>` 형태의 인증 토큰. `<API_SECRET>`은 Cloudflare에서 발급받은 비밀 키입니다. |
+
+### 쿼리 파라미터
+
+| 파라미터     | 타입    | 기본값   | 설명                                                                                                                  |
+|--------------|---------|----------|-----------------------------------------------------------------------------------------------------------------------|
+| `userId`     | 정수    | **필수** | 조회하려는 사용자 ID.                                                                                                 |
+| `productId`  | 정수    | 없음     | 특정 상품 ID로 필터링. 지정하지 않으면 모든 상품의 데이터를 조회합니다.                                               |
+| `groupId`    | 정수    | 없음     | 특정 그룹 ID로 필터링. 지정하면 해당 그룹에 속한 상품들의 데이터를 조회합니다.                                        |
+| `days`       | 정수    | `30`     | 검색에 포함할 과거 일수 (오늘 기준).                                                                                  |
+| `market`     | 문자열  | `total`  | 정렬 기준이 될 마켓. `cou`, `nav`, `ele`, `acu`, `gma` 또는 `total` 중 하나일 수 있습니다. 기본값은 모든 마켓의 총 조회수입니다. |
+| `min_views`  | 정수    | 없음     | 결과에 포함되기 위한 상품의 **최소** 조회수 (지정된 `market` 기준). `max_views`와 함께 사용하면 범위 조회가 가능합니다.    |
+| `max_views`  | 정수    | 없음     | 결과에 포함되기 위한 상품의 **최대** 조회수 (지정된 `market` 기준). `min_views`와 함께 사용하면 범위 조회가 가능합니다.    |
+| `sort_order` | 문자열  | `desc`   | 정렬 순서. `asc` (오름차순) 또는 `desc` (내림차순)일 수 있습니다.                                                      |
+
+### 요청 예시
+
+**1. 상위 상품 조회**
+
+지난 7일 동안 사용자 `12345`에 대해 `nav` 마켓 조회수를 기준으로 내림차순 정렬된 상위 상품 가져오기.
+
+```
+GET /api/views?userId=12345&days=7&market=nav&sort_order=desc
+Host: <your-worker-url>
+Authorization: Bearer <YOUR_API_SECRET>
+```
+
+**2. 특정 상품의 조회수 조회**
+
+사용자 `12345`의 특정 상품 `67890`에 대한 조회 데이터 가져오기.
+
+```
+GET /api/views?userId=12345&productId=67890
+Host: <your-worker-url>
+Authorization: Bearer <YOUR_API_SECRET>
+```
+
+**3. 특정 그룹의 상품 조회수 필터링**
+
+사용자 `12345`에 대해 그룹 `123`에 속한 상품들의 전체 조회수가 10회 이하인 상품 목록 조회하기.
+
+```
+GET /api/views?userId=12345&groupId=123&max_views=10
+Host: <your-worker-url>
+Authorization: Bearer <YOUR_API_SECRET>
+```
+`
+
+### 성공 응답
+
+- **상태 코드**: `200 OK`
+- **Content-Type**: `application/json`
+- **본문**: 상품 조회 객체의 JSON 배열. (결과에 `groupId` 필드는 포함되지 않습니다.)
+
+```json
+[
+  {
+    "productId": 789,
+    "total_views": 150,
+    "cou_views": 50,
+    "nav_views": 80,
+    "ele_views": 10,
+    "acu_views": 5,
+    "gma_views": 5
+  },
+  {
+    "productId": 101,
+    "total_views": 95,
+    "cou_views": 30,
+    "nav_views": 60,
+    "ele_views": 0,
+    "acu_views": 5,
+    "gma_views": 0
+  }
+]
+```
+
+### 오류 응답
+
+`userId` 파라미터가 누락된 경우.
+
+- **상태 코드**: `400 Bad Request`
+- **Content-Type**: `application/json`
+- **본문**:
+
+```json
+{
+  "error": "userId query parameter is required"
+}
+```
+
+- **상태 코드**: `401 Unauthorized`
+- **Content-Type**: `application/json`
+- **본문**:
+
+```json
+{
+  "error": "Unauthorized"
+}
+```
+
+---
+
+## 3. 날짜별 상세 조회 API
+
+이 엔드포인트는 특정 사용자와 상품에 대한 날짜별 상세 조회 데이터를 가져옵니다.
+
+- **URL**: `GET /api/detailviews`
+- **메서드**: `GET`
+
+### 헤더
+
+| 헤더            | 타입   | 필수 여부 | 설명                                                                                   |
+|---------------|--------|-----------|----------------------------------------------------------------------------------------|
+| `Authorization` | 문자열 | 예        | `Bearer <API_SECRET>` 형태의 인증 토큰. `<API_SECRET>`은 Cloudflare에서 발급받은 비밀 키입니다. |
+
+### 쿼리 파라미터
+
+| 파라미터     | 타입    | 기본값   | 설명                                                                                                                  |
+|--------------|---------|----------|-----------------------------------------------------------------------------------------------------------------------|
+| `userId`     | 정수    | **필수** | 조회하려는 사용자 ID.                                                                                                 |
+| `productId`  | 정수    | **필수** | 조회하려는 상품 ID.                                                                                                   |
+| `days`       | 정수    | `14`     | 검색에 포함할 과거 일수 (오늘 기준). 기본값은 14일입니다.                                                             |
+
+### 요청 예시
+
+**1. 기본 조회 (14일)**
+
+사용자 `12345`의 상품 `67890`에 대한 지난 14일간의 날짜별 조회수 데이터 가져오기.
+
+```
+GET /api/detailviews?userId=12345&productId=67890
+Host: <your-worker-url>
+Authorization: Bearer <YOUR_API_SECRET>
+```
+
+**2. 특정 기간 조회**
+
+사용자 `12345`의 상품 `67890`에 대한 지난 7일간의 날짜별 조회수 데이터 가져오기.
+
+```
+GET /api/detailviews?userId=12345&productId=67890&days=7
+Host: <your-worker-url>
+Authorization: Bearer <YOUR_API_SECRET>
+```
+
+### 성공 응답
+
+- **상태 코드**: `200 OK`
+- **Content-Type**: `application/json`
+- **본문**: 날짜별 조회 객체의 JSON 배열 (최신 날짜부터 내림차순 정렬).
+
+```json
+[
+  {
+    "date": "2024-01-15",
+    "total_views": 25,
+    "cou_views": 10,
+    "nav_views": 12,
+    "ele_views": 2,
+    "acu_views": 1,
+    "gma_views": 0
+  },
+  {
+    "date": "2024-01-14",
+    "total_views": 18,
+    "cou_views": 8,
+    "nav_views": 7,
+    "ele_views": 2,
+    "acu_views": 1,
+    "gma_views": 0
+  },
+  {
+    "date": "2024-01-13",
+    "total_views": 32,
+    "cou_views": 15,
+    "nav_views": 14,
+    "ele_views": 2,
+    "acu_views": 1,
+    "gma_views": 0
+  }
+]
+```
+
+### 오류 응답
+
+**필수 파라미터 누락**
+
+- **상태 코드**: `400 Bad Request`
+- **Content-Type**: `application/json`
+- **본문**:
+
+```json
+{
+  "error": "userId query parameter is required"
+}
+```
+
+또는
+
+```json
+{
+  "error": "productId query parameter is required"
+}
+```
+
+**인증 실패**
+
+- **상태 코드**: `401 Unauthorized`
+- **Content-Type**: `application/json`
+- **본문**:
+
+```json
+{
+  "error": "Unauthorized"
+}
+```
+
+---
+
+## 4. 조회 데이터 삭제 API
+
+이 엔드포인트는 특정 사용자와 상품에 대한 모든 조회 데이터를 삭제합니다.
+
+- **URL**: `DELETE /api/views`
+- **메서드**: `DELETE`
+
+### 헤더
+
+| 헤더            | 타입   | 필수 여부 | 설명                                                                                   |
+|---------------|--------|-----------|----------------------------------------------------------------------------------------|
+| `Authorization` | 문자열 | 예        | `Bearer <API_SECRET>` 형태의 인증 토큰. `<API_SECRET>`은 Cloudflare에서 발급받은 비밀 키입니다. |
+
+### 쿼리 파라미터
+
+| 파라미터     | 타입    | 기본값   | 설명                                                                                                                  |
+|--------------|---------|----------|-----------------------------------------------------------------------------------------------------------------------|
+| `userId`     | 정수    | **필수** | 삭제하려는 데이터의 사용자 ID.                                                                                        |
+| `productId`  | 정수    | **필수** | 삭제하려는 데이터의 상품 ID.                                                                                          |
+
+### 요청 예시
+
+**특정 사용자의 특정 상품 데이터 삭제**
+
+사용자 `12345`의 상품 `67890`에 대한 모든 조회 데이터를 삭제합니다.
+
+```
+DELETE /api/views?userId=12345&productId=67890
+Host: <your-worker-url>
+Authorization: Bearer <YOUR_API_SECRET>
+```
+
+### 성공 응답
+
+- **상태 코드**: `200 OK`
+- **Content-Type**: `application/json`
+- **본문**: 삭제 결과 정보가 포함된 JSON 객체.
+
+```json
+{
+  "success": true,
+  "deletedRows": 15,
+  "message": "Deleted 15 rows for userId 12345 and productId 67890"
+}
+```
+
+### 오류 응답
+
+**필수 파라미터 누락**
+
+- **상태 코드**: `400 Bad Request`
+- **Content-Type**: `application/json`
+- **본문**:
+
+```json
+{
+  "error": "userId query parameter is required"
+}
+```
+
+또는
+
+```json
+{
+  "error": "productId query parameter is required"
+}
+```
+
+**잘못된 파라미터 값**
+
+- **상태 코드**: `400 Bad Request`
+- **Content-Type**: `application/json`
+- **본문**:
+
+```json
+{
+  "error": "Invalid userId"
+}
+```
+
+또는
+
+```json
+{
+  "error": "Invalid productId"
+}
+```
+
+**인증 실패**
+
+- **상태 코드**: `401 Unauthorized`
+- **Content-Type**: `application/json`
+- **본문**:
+
+```json
+{
+  "error": "Unauthorized"
+}
+```
+
+**서버 오류**
+
+- **상태 코드**: `500 Internal Server Error`
+- **Content-Type**: `application/json`
+- **본문**:
+
+```json
+{
+  "error": "Database error message"
+}
+```
+
+---
+
+## 공통 사항
+
+- 모든 API는 HTTPS를 통해서만 접근 가능합니다.
+- 날짜 형식은 `YYYY-MM-DD` (ISO 8601 형식)입니다.
+- 모든 숫자 파라미터는 양의 정수여야 합니다.
+- `days` 파라미터는 1~365 범위 내에서만 유효합니다.
+- API 응답 결과는 최대 1000개로 제한됩니다.
+- **주의사항**: 삭제 API는 되돌릴 수 없는 작업이므로 사용 시 주의가 필요합니다.

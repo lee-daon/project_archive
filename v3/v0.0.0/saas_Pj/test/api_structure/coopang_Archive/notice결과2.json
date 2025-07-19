@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "data": {
+    "notices": [
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "품명 및 모델명",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "KC 인증정보",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "크기",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "중량",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "색상",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "재질",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "사용연령 또는 권장사용연령",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "크기∙체중의 한계",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "동일모델의 출시년월",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "제조자(수입자)",
+        "content": "한국"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "제조국",
+        "content": "중국"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "취급방법 및 취급시 주의사항, 안전표시",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "품질보증기준",
+        "content": "상세페이지참조"
+      },
+      {
+        "noticeCategoryName": "어린이제품",
+        "noticeCategoryDetailName": "A/S 책임자와 전화번호",
+        "content": "1588-1234"
+      }
+    ]
+  },
+  "message": "카테고리 68010 공지사항 추출 성공"
+}

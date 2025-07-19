@@ -165,3 +165,4 @@ logs/
 v3_image_translator/image_translator_merged/workers/ocr_worker/models/
 v3_image_translator/image_translator_merged/workers/inpainting_worker/lama-fourier/models/
 
+wrangler.toml

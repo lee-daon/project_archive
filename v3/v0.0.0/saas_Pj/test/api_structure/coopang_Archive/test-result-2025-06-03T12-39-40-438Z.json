@@ -1,0 +1,780 @@
+{
+  "success": true,
+  "message": "쿠팡 등록 프로세스 완료 - 매핑까지 완료",
+  "initialJsonResult": {
+    "success": true,
+    "message": "createInitialJson 함수 모든 단계 완료 - AI 카테고리 매핑 + 최종 JSON 생성됨",
+    "initialJson": {
+      "productId": "721963707226",
+      "productName": "산투이 3톤 소형 롤러 ",
+      "coopangCatId": 64302,
+      "brandName": "나이키/Nike",
+      "keywords": [
+        "소형 롤러",
+        "보행식 롤러",
+        "탑승식 롤러",
+        "유압식 롤러",
+        "아스팔트 롤러",
+        "트렌치 롤러",
+        "단일 스틸 휠",
+        "이중 스틸 휠",
+        "3톤 롤러",
+        "1톤 롤러",
+        "노란색 롤러",
+        "건설 장비",
+        "도로 장비"
+      ],
+      "representativeImage": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794844927-721963707226-4-main.jpg",
+      "images": [
+        "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843777-721963707226-1-main.jpg",
+        "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843262-721963707226-2-main.jpg",
+        "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794840295-721963707226-0-main.jpg"
+      ],
+      "contents": "\n    <div class=\"product-detail-container\" style=\"font-family: 'Noto Sans KR', sans-serif; max-width: 860px; margin: 0 auto; text-align: center; position: relative;\">\n      \n      \n      <div class=\"product-description\" style=\"margin: 20px 0;\">\n        <h3 style=\"text-align: center; font-size: 1.5em; margin-bottom: 15px;\">상품 상세 정보</h3>\n        <p style=\"text-align: center; color: #555;\">상품에 대한 자세한 정보는 아래 이미지를 참고해주세요.</p>\n      </div>\n      \n      <div class=\"product-attributes\" style=\"margin: 20px 0;\"><h3 style=\"text-align: center; font-size: 1.3em; margin-bottom: 15px;\">상품 정보</h3><table style=\"width:100%; border-collapse: collapse; margin-top: 10px; border: 1px solid #ddd;\"><tbody>\n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">모델</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">SRD03 C6JS</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">브랜드</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">색상 분류</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이 핸드 가이드 2륜 예약금, 산추이 1톤 2륜 예약금, 산추이 2톤 2륜 예약금, 산추이 3톤 2륜 예약금, 기타 톤수</td>\n        </tr>\n      </tbody></table></div>\n      \n      \n    </div>",
+      "optionSchema": [
+        {
+          "optionId": "3000001",
+          "optionName": "사이즈",
+          "optionValues": [
+            {
+              "valueId": "3000001",
+              "valueName": "핸드 가이드 양륜"
+            },
+            {
+              "valueId": "3000002",
+              "valueName": "1톤"
+            },
+            {
+              "valueId": "3000003",
+              "valueName": "2톤"
+            },
+            {
+              "valueId": "3000004",
+              "valueName": "3톤"
+            }
+          ]
+        },
+        {
+          "optionId": "3000002",
+          "optionName": "수량",
+          "optionValues": [
+            {
+              "valueId": "3000005",
+              "valueName": "1"
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "stockQuantity": 200,
+          "calculatedPrice": 876280,
+          "cost": 642600,
+          "optionCombination": [
+            {
+              "optionId": "3000001",
+              "valueId": "3000001"
+            },
+            {
+              "optionId": "3000002",
+              "valueId": "3000005"
+            }
+          ]
+        },
+        {
+          "stockQuantity": 200,
+          "calculatedPrice": 876280,
+          "cost": 642600,
+          "optionCombination": [
+            {
+              "optionId": "3000001",
+              "valueId": "3000002"
+            },
+            {
+              "optionId": "3000002",
+              "valueId": "3000005"
+            }
+          ]
+        },
+        {
+          "stockQuantity": 200,
+          "calculatedPrice": 876280,
+          "cost": 642600,
+          "optionCombination": [
+            {
+              "optionId": "3000001",
+              "valueId": "3000003"
+            },
+            {
+              "optionId": "3000002",
+              "valueId": "3000005"
+            }
+          ]
+        },
+        {
+          "stockQuantity": 200,
+          "calculatedPrice": 876280,
+          "cost": 642600,
+          "optionCombination": [
+            {
+              "optionId": "3000001",
+              "valueId": "3000004"
+            },
+            {
+              "optionId": "3000002",
+              "valueId": "3000005"
+            }
+          ]
+        }
+      ],
+      "deliveryInfo": {
+        "deliveryFee": 0,
+        "freeShipping": 1
+      },
+      "discountRate": 10
+    },
+    "aiMappingUsed": true
+  },
+  "mappingResult": {
+    "success": true,
+    "totalItems": 4,
+    "data": {
+      "displayCategoryCode": 64302,
+      "sellerProductName": "산투이 3톤 소형 롤러 ",
+      "vendorId": "A01297100",
+      "saleStartedAt": "2025-06-03T12:39:40.437Z",
+      "saleEndedAt": "2099-01-01T23:59:59",
+      "displayProductName": "산투이 3톤 소형 롤러 ",
+      "generalProductName": "산투이 3톤 소형 롤러 ",
+      "productGroup": "기타 적재/운반도구",
+      "deliveryMethod": "AGENT_BUY",
+      "deliveryCompanyCode": "KGB",
+      "deliveryChargeType": "FREE",
+      "deliveryCharge": 0,
+      "deliveryChargeOnReturn": 5000,
+      "remoteAreaDeliverable": "Y",
+      "unionDeliveryType": "NOT_UNION_DELIVERY",
+      "returnCenterCode": "1002151345",
+      "returnChargeName": "1302동 1103호",
+      "companyContactNumber": "010-4840-8754",
+      "returnZipCode": "16543",
+      "returnAddress": "경기도 수원시 영통구 인계로220번길 6-75",
+      "returnAddressDetail": "매탄동 3층 W1호(매탄동)",
+      "returnCharge": 5000,
+      "outboundShippingPlaceCode": "22683805",
+      "vendorUserId": "dlekdhs1",
+      "requested": false,
+      "items": [
+        {
+          "itemName": "핸드 가이드 양륜_1",
+          "originalPrice": 973644,
+          "salePrice": 876280,
+          "maximumBuyCount": 200,
+          "maximumBuyForPerson": 0,
+          "outboundShippingTimeDay": 3,
+          "maximumBuyForPersonPeriod": 1,
+          "unitCount": 1,
+          "adultOnly": "EVERYONE",
+          "taxType": "TAX",
+          "parallelImported": "NOT_PARALLEL_IMPORTED",
+          "overseasPurchased": "OVERSEAS_PURCHASED",
+          "pccNeeded": "true",
+          "externalVendorSku": "721963707226;사이즈:핸드 가이드 양륜;수량:1",
+          "emptyBarcode": true,
+          "emptyBarcodeReason": "구매대행상품",
+          "certifications": [
+            {
+              "certificationType": "NOT_REQUIRED",
+              "certificationCode": ""
+            }
+          ],
+          "searchTags": [
+            "소형 롤러",
+            "보행식 롤러",
+            "탑승식 롤러",
+            "유압식 롤러",
+            "아스팔트 롤러",
+            "트렌치 롤러",
+            "단일 스틸 휠",
+            "이중 스틸 휠",
+            "3톤 롤러",
+            "1톤 롤러",
+            "노란색 롤러",
+            "건설 장비",
+            "도로 장비"
+          ],
+          "images": [
+            {
+              "imageOrder": 0,
+              "imageType": "REPRESENTATION",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794844927-721963707226-4-main.jpg"
+            },
+            {
+              "imageOrder": 1,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843777-721963707226-1-main.jpg"
+            },
+            {
+              "imageOrder": 2,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843262-721963707226-2-main.jpg"
+            },
+            {
+              "imageOrder": 3,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794840295-721963707226-0-main.jpg"
+            }
+          ],
+          "notices": [
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "품명 및 모델명",
+              "content": "상세페이지참조"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "인증/허가 사항",
+              "content": "상세페이지참조"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "제조국(원산지)",
+              "content": "중국"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "제조자(수입자)",
+              "content": "한국"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "소비자상담 관련 전화번호",
+              "content": "01048408754"
+            }
+          ],
+          "attributes": [
+            {
+              "attributeTypeName": "사이즈",
+              "attributeValueName": "핸드 가이드 양륜"
+            },
+            {
+              "attributeTypeName": "수량",
+              "attributeValueName": "1"
+            }
+          ],
+          "contents": [
+            {
+              "contentsType": "TEXT",
+              "contentDetails": [
+                {
+                  "content": "<html>\n    <div class=\"product-detail-container\" style=\"font-family: 'Noto Sans KR', sans-serif; max-width: 860px; margin: 0 auto; text-align: center; position: relative;\">\n      \n      \n      <div class=\"product-description\" style=\"margin: 20px 0;\">\n        <h3 style=\"text-align: center; font-size: 1.5em; margin-bottom: 15px;\">상품 상세 정보</h3>\n        <p style=\"text-align: center; color: #555;\">상품에 대한 자세한 정보는 아래 이미지를 참고해주세요.</p>\n      </div>\n      \n      <div class=\"product-attributes\" style=\"margin: 20px 0;\"><h3 style=\"text-align: center; font-size: 1.3em; margin-bottom: 15px;\">상품 정보</h3><table style=\"width:100%; border-collapse: collapse; margin-top: 10px; border: 1px solid #ddd;\"><tbody>\n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">모델</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">SRD03 C6JS</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">브랜드</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">색상 분류</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이 핸드 가이드 2륜 예약금, 산추이 1톤 2륜 예약금, 산추이 2톤 2륜 예약금, 산추이 3톤 2륜 예약금, 기타 톤수</td>\n        </tr>\n      </tbody></table></div>\n      \n      \n    </div></html>",
+                  "detailType": "TEXT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "itemName": "1톤_1",
+          "originalPrice": 973644,
+          "salePrice": 876280,
+          "maximumBuyCount": 200,
+          "maximumBuyForPerson": 0,
+          "outboundShippingTimeDay": 3,
+          "maximumBuyForPersonPeriod": 1,
+          "unitCount": 1,
+          "adultOnly": "EVERYONE",
+          "taxType": "TAX",
+          "parallelImported": "NOT_PARALLEL_IMPORTED",
+          "overseasPurchased": "OVERSEAS_PURCHASED",
+          "pccNeeded": "true",
+          "externalVendorSku": "721963707226;사이즈:1톤;수량:1",
+          "emptyBarcode": true,
+          "emptyBarcodeReason": "구매대행상품",
+          "certifications": [
+            {
+              "certificationType": "NOT_REQUIRED",
+              "certificationCode": ""
+            }
+          ],
+          "searchTags": [
+            "소형 롤러",
+            "보행식 롤러",
+            "탑승식 롤러",
+            "유압식 롤러",
+            "아스팔트 롤러",
+            "트렌치 롤러",
+            "단일 스틸 휠",
+            "이중 스틸 휠",
+            "3톤 롤러",
+            "1톤 롤러",
+            "노란색 롤러",
+            "건설 장비",
+            "도로 장비"
+          ],
+          "images": [
+            {
+              "imageOrder": 0,
+              "imageType": "REPRESENTATION",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794844927-721963707226-4-main.jpg"
+            },
+            {
+              "imageOrder": 1,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843777-721963707226-1-main.jpg"
+            },
+            {
+              "imageOrder": 2,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843262-721963707226-2-main.jpg"
+            },
+            {
+              "imageOrder": 3,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794840295-721963707226-0-main.jpg"
+            }
+          ],
+          "notices": [
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "품명 및 모델명",
+              "content": "상세페이지참조"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "인증/허가 사항",
+              "content": "상세페이지참조"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "제조국(원산지)",
+              "content": "중국"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "제조자(수입자)",
+              "content": "한국"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "소비자상담 관련 전화번호",
+              "content": "01048408754"
+            }
+          ],
+          "attributes": [
+            {
+              "attributeTypeName": "사이즈",
+              "attributeValueName": "1톤"
+            },
+            {
+              "attributeTypeName": "수량",
+              "attributeValueName": "1"
+            }
+          ],
+          "contents": [
+            {
+              "contentsType": "TEXT",
+              "contentDetails": [
+                {
+                  "content": "<html>\n    <div class=\"product-detail-container\" style=\"font-family: 'Noto Sans KR', sans-serif; max-width: 860px; margin: 0 auto; text-align: center; position: relative;\">\n      \n      \n      <div class=\"product-description\" style=\"margin: 20px 0;\">\n        <h3 style=\"text-align: center; font-size: 1.5em; margin-bottom: 15px;\">상품 상세 정보</h3>\n        <p style=\"text-align: center; color: #555;\">상품에 대한 자세한 정보는 아래 이미지를 참고해주세요.</p>\n      </div>\n      \n      <div class=\"product-attributes\" style=\"margin: 20px 0;\"><h3 style=\"text-align: center; font-size: 1.3em; margin-bottom: 15px;\">상품 정보</h3><table style=\"width:100%; border-collapse: collapse; margin-top: 10px; border: 1px solid #ddd;\"><tbody>\n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">모델</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">SRD03 C6JS</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">브랜드</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">색상 분류</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이 핸드 가이드 2륜 예약금, 산추이 1톤 2륜 예약금, 산추이 2톤 2륜 예약금, 산추이 3톤 2륜 예약금, 기타 톤수</td>\n        </tr>\n      </tbody></table></div>\n      \n      \n    </div></html>",
+                  "detailType": "TEXT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "itemName": "2톤_1",
+          "originalPrice": 973644,
+          "salePrice": 876280,
+          "maximumBuyCount": 200,
+          "maximumBuyForPerson": 0,
+          "outboundShippingTimeDay": 3,
+          "maximumBuyForPersonPeriod": 1,
+          "unitCount": 1,
+          "adultOnly": "EVERYONE",
+          "taxType": "TAX",
+          "parallelImported": "NOT_PARALLEL_IMPORTED",
+          "overseasPurchased": "OVERSEAS_PURCHASED",
+          "pccNeeded": "true",
+          "externalVendorSku": "721963707226;사이즈:2톤;수량:1",
+          "emptyBarcode": true,
+          "emptyBarcodeReason": "구매대행상품",
+          "certifications": [
+            {
+              "certificationType": "NOT_REQUIRED",
+              "certificationCode": ""
+            }
+          ],
+          "searchTags": [
+            "소형 롤러",
+            "보행식 롤러",
+            "탑승식 롤러",
+            "유압식 롤러",
+            "아스팔트 롤러",
+            "트렌치 롤러",
+            "단일 스틸 휠",
+            "이중 스틸 휠",
+            "3톤 롤러",
+            "1톤 롤러",
+            "노란색 롤러",
+            "건설 장비",
+            "도로 장비"
+          ],
+          "images": [
+            {
+              "imageOrder": 0,
+              "imageType": "REPRESENTATION",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794844927-721963707226-4-main.jpg"
+            },
+            {
+              "imageOrder": 1,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843777-721963707226-1-main.jpg"
+            },
+            {
+              "imageOrder": 2,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843262-721963707226-2-main.jpg"
+            },
+            {
+              "imageOrder": 3,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794840295-721963707226-0-main.jpg"
+            }
+          ],
+          "notices": [
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "품명 및 모델명",
+              "content": "상세페이지참조"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "인증/허가 사항",
+              "content": "상세페이지참조"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "제조국(원산지)",
+              "content": "중국"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "제조자(수입자)",
+              "content": "한국"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "소비자상담 관련 전화번호",
+              "content": "01048408754"
+            }
+          ],
+          "attributes": [
+            {
+              "attributeTypeName": "사이즈",
+              "attributeValueName": "2톤"
+            },
+            {
+              "attributeTypeName": "수량",
+              "attributeValueName": "1"
+            }
+          ],
+          "contents": [
+            {
+              "contentsType": "TEXT",
+              "contentDetails": [
+                {
+                  "content": "<html>\n    <div class=\"product-detail-container\" style=\"font-family: 'Noto Sans KR', sans-serif; max-width: 860px; margin: 0 auto; text-align: center; position: relative;\">\n      \n      \n      <div class=\"product-description\" style=\"margin: 20px 0;\">\n        <h3 style=\"text-align: center; font-size: 1.5em; margin-bottom: 15px;\">상품 상세 정보</h3>\n        <p style=\"text-align: center; color: #555;\">상품에 대한 자세한 정보는 아래 이미지를 참고해주세요.</p>\n      </div>\n      \n      <div class=\"product-attributes\" style=\"margin: 20px 0;\"><h3 style=\"text-align: center; font-size: 1.3em; margin-bottom: 15px;\">상품 정보</h3><table style=\"width:100%; border-collapse: collapse; margin-top: 10px; border: 1px solid #ddd;\"><tbody>\n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">모델</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">SRD03 C6JS</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">브랜드</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">색상 분류</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이 핸드 가이드 2륜 예약금, 산추이 1톤 2륜 예약금, 산추이 2톤 2륜 예약금, 산추이 3톤 2륜 예약금, 기타 톤수</td>\n        </tr>\n      </tbody></table></div>\n      \n      \n    </div></html>",
+                  "detailType": "TEXT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "itemName": "3톤_1",
+          "originalPrice": 973644,
+          "salePrice": 876280,
+          "maximumBuyCount": 200,
+          "maximumBuyForPerson": 0,
+          "outboundShippingTimeDay": 3,
+          "maximumBuyForPersonPeriod": 1,
+          "unitCount": 1,
+          "adultOnly": "EVERYONE",
+          "taxType": "TAX",
+          "parallelImported": "NOT_PARALLEL_IMPORTED",
+          "overseasPurchased": "OVERSEAS_PURCHASED",
+          "pccNeeded": "true",
+          "externalVendorSku": "721963707226;사이즈:3톤;수량:1",
+          "emptyBarcode": true,
+          "emptyBarcodeReason": "구매대행상품",
+          "certifications": [
+            {
+              "certificationType": "NOT_REQUIRED",
+              "certificationCode": ""
+            }
+          ],
+          "searchTags": [
+            "소형 롤러",
+            "보행식 롤러",
+            "탑승식 롤러",
+            "유압식 롤러",
+            "아스팔트 롤러",
+            "트렌치 롤러",
+            "단일 스틸 휠",
+            "이중 스틸 휠",
+            "3톤 롤러",
+            "1톤 롤러",
+            "노란색 롤러",
+            "건설 장비",
+            "도로 장비"
+          ],
+          "images": [
+            {
+              "imageOrder": 0,
+              "imageType": "REPRESENTATION",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794844927-721963707226-4-main.jpg"
+            },
+            {
+              "imageOrder": 1,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843777-721963707226-1-main.jpg"
+            },
+            {
+              "imageOrder": 2,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843262-721963707226-2-main.jpg"
+            },
+            {
+              "imageOrder": 3,
+              "imageType": "DETAIL",
+              "vendorPath": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794840295-721963707226-0-main.jpg"
+            }
+          ],
+          "notices": [
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "품명 및 모델명",
+              "content": "상세페이지참조"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "인증/허가 사항",
+              "content": "상세페이지참조"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "제조국(원산지)",
+              "content": "중국"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "제조자(수입자)",
+              "content": "한국"
+            },
+            {
+              "noticeCategoryName": "기타 재화",
+              "noticeCategoryDetailName": "소비자상담 관련 전화번호",
+              "content": "01048408754"
+            }
+          ],
+          "attributes": [
+            {
+              "attributeTypeName": "사이즈",
+              "attributeValueName": "3톤"
+            },
+            {
+              "attributeTypeName": "수량",
+              "attributeValueName": "1"
+            }
+          ],
+          "contents": [
+            {
+              "contentsType": "TEXT",
+              "contentDetails": [
+                {
+                  "content": "<html>\n    <div class=\"product-detail-container\" style=\"font-family: 'Noto Sans KR', sans-serif; max-width: 860px; margin: 0 auto; text-align: center; position: relative;\">\n      \n      \n      <div class=\"product-description\" style=\"margin: 20px 0;\">\n        <h3 style=\"text-align: center; font-size: 1.5em; margin-bottom: 15px;\">상품 상세 정보</h3>\n        <p style=\"text-align: center; color: #555;\">상품에 대한 자세한 정보는 아래 이미지를 참고해주세요.</p>\n      </div>\n      \n      <div class=\"product-attributes\" style=\"margin: 20px 0;\"><h3 style=\"text-align: center; font-size: 1.3em; margin-bottom: 15px;\">상품 정보</h3><table style=\"width:100%; border-collapse: collapse; margin-top: 10px; border: 1px solid #ddd;\"><tbody>\n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">모델</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">SRD03 C6JS</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">브랜드</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이</td>\n        </tr>\n      \n        <tr>\n          <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">색상 분류</th>\n          <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이 핸드 가이드 2륜 예약금, 산추이 1톤 2륜 예약금, 산추이 2톤 2륜 예약금, 산추이 3톤 2륜 예약금, 기타 톤수</td>\n        </tr>\n      </tbody></table></div>\n      \n      \n    </div></html>",
+                  "detailType": "TEXT"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "requiredDocuments": [
+        {
+          "templateName": "인보이스영수증(해외구매대행 선택시)",
+          "vendorDocumentPath": "http://image11.coupangcdn.com/image/product/content/vendorItem/2018/07/02/41579010/eebc0c30-8f35-4a51-8ffd-808953414dc1.jpg"
+        }
+      ]
+    },
+    "message": "쿠팡 등록용 데이터 매핑 완료 - 4개 아이템"
+  },
+  "config": {
+    "coopangConfig": {
+      "deliveryCompanyCode": "KGB",
+      "afterServiceGuideContent": "테스트상품입니다",
+      "afterServiceTelephone": "01048408754",
+      "maxOptionCount": 10,
+      "returnInfo": {
+        "returnChargeName": "1302동 1103호",
+        "returnCenterCode": "1002151345",
+        "companyContactNumber": "010-4840-8754",
+        "returnZipCode": "16543",
+        "returnAddress": "경기도 수원시 영통구 인계로220번길 6-75",
+        "returnAddressDetail": "매탄동 3층 W1호(매탄동)",
+        "outboundShippingPlaceCode": "22683805",
+        "returnDeliveryFee": 5000
+      }
+    },
+    "priceConfig": {
+      "minimumMargin": 5000,
+      "minimumProfitMargin": 10,
+      "profitMargin": 20,
+      "deliveryFee": "6000.00",
+      "buyingFee": 2,
+      "importDuty": 8,
+      "importVat": 10,
+      "chinaExchangeRate": 210,
+      "usaExchangeRate": 1400,
+      "minPercentage": 10,
+      "maxPercentage": 30,
+      "freeShipping": 1,
+      "includeImportDuty": 0
+    },
+    "registerManagement": {
+      "marketNumber": 2
+    },
+    "coopangApiAuth": {
+      "accessKey": "8cd1a47b-ca95-481d-8d54-fe7710d22be5",
+      "secretKey": "264716568f7148871a2ad0d452439fca6c920130",
+      "vendorId": "A01297100",
+      "vendorUserId": "dlekdhs1"
+    }
+  },
+  "baseData": {
+    "jsonData": {
+      "success": true,
+      "variants": [
+        {
+          "price": "3000.00",
+          "stockQuantity": 200,
+          "optionCombination": [
+            {
+              "valueId": "25155353817",
+              "optionId": "1627207"
+            }
+          ]
+        },
+        {
+          "price": "3000.00",
+          "stockQuantity": 200,
+          "optionCombination": [
+            {
+              "valueId": "25155353818",
+              "optionId": "1627207"
+            }
+          ]
+        },
+        {
+          "price": "3000.00",
+          "stockQuantity": 200,
+          "optionCombination": [
+            {
+              "valueId": "25155353819",
+              "optionId": "1627207"
+            }
+          ]
+        },
+        {
+          "price": "3000.00",
+          "stockQuantity": 200,
+          "optionCombination": [
+            {
+              "valueId": "25155353820",
+              "optionId": "1627207"
+            }
+          ]
+        }
+      ],
+      "productInfo": {
+        "url": "//item.taobao.com/item.htm?id=721963707226",
+        "video": null,
+        "images": [
+          "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843777-721963707226-1-main.jpg",
+          "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843262-721963707226-2-main.jpg",
+          "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794840295-721963707226-0-main.jpg"
+        ],
+        "keywords": [
+          "소형 롤러",
+          "보행식 롤러",
+          "탑승식 롤러",
+          "유압식 롤러",
+          "아스팔트 롤러",
+          "트렌치 롤러",
+          "단일 스틸 휠",
+          "이중 스틸 휠",
+          "3톤 롤러",
+          "1톤 롤러",
+          "노란색 롤러",
+          "건설 장비",
+          "도로 장비"
+        ],
+        "brandName": "나이키/Nike",
+        "productId": "721963707226",
+        "attributes": [
+          {
+            "name": "모델",
+            "value": "SRD03 C6JS"
+          },
+          {
+            "name": "브랜드",
+            "value": "산추이"
+          },
+          {
+            "name": "색상 분류",
+            "value": "산추이 핸드 가이드 2륜 예약금, 산추이 1톤 2륜 예약금, 산추이 2톤 2륜 예약금, 산추이 3톤 2륜 예약금, 기타 톤수"
+          }
+        ],
+        "categoryId": "127742003",
+        "deliveryFee": "0.00",
+        "productName": "산투이 3톤 소형 롤러 ",
+        "attributes_cut": "모델 / 브랜드 / 색상 분류",
+        "descriptionImages": [],
+        "representativeImage": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794844927-721963707226-4-main.jpg"
+      },
+      "optionSchema": [
+        {
+          "optionId": "1627207",
+          "optionName": "색상 분류",
+          "optionValues": [
+            {
+              "valueId": "25155353817",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796040357-721963707226-1627207:25155353817-option.jpg",
+              "valueName": "산투이 핸드 가이드 양륜 예약금"
+            },
+            {
+              "valueId": "25155353818",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796041647-721963707226-1627207:25155353818-option.jpg",
+              "valueName": "산투이 1톤 쌍륜 예약금"
+            },
+            {
+              "valueId": "25155353819",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796040987-721963707226-1627207:25155353819-option.jpg",
+              "valueName": "산투이 2톤 쌍륜 예약금"
+            },
+            {
+              "valueId": "25155353820",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796042255-721963707226-1627207:25155353820-option.jpg",
+              "valueName": "산투이 3톤 쌍륜 예약금"
+            }
+          ]
+        }
+      ]
+    },
+    "coopangCatId": 64302
+  },
+  "userid": 2,
+  "productid": 721963707226
+}

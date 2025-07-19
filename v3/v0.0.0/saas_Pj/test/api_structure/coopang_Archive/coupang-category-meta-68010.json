@@ -1,0 +1,895 @@
+{
+  "success": true,
+  "data": {
+    "code": "SUCCESS",
+    "message": "",
+    "data": {
+      "isAllowSingleItem": false,
+      "attributes": [
+        {
+          "attributeTypeName": "색상",
+          "dataType": "STRING",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "MANDATORY",
+          "groupNumber": "NONE",
+          "exposed": "EXPOSED"
+        },
+        {
+          "attributeTypeName": "신발사이즈",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "225",
+            "230",
+            "235",
+            "240",
+            "245",
+            "250",
+            "255",
+            "260",
+            "265",
+            "270",
+            "275",
+            "280",
+            "285",
+            "290",
+            "295",
+            "300",
+            "310",
+            "320이상"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "MANDATORY",
+          "groupNumber": "NONE",
+          "exposed": "EXPOSED"
+        },
+        {
+          "attributeTypeName": "출시 연도",
+          "dataType": "NUMBER",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "일",
+          "usableUnits": [
+            "일",
+            "주",
+            "년도"
+          ],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "출시 계절",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "봄",
+            "여름",
+            "가을",
+            "겨울"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "패션 의류/잡화 색상계열",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "블랙계열",
+            "네이비계열",
+            "그레이계열",
+            "실버계열",
+            "레드계열",
+            "오렌지계열",
+            "옐로우계열",
+            "그린계열",
+            "블루계열",
+            "바이올렛/보라계열",
+            "핑크계열",
+            "화이트계열",
+            "브라운계열",
+            "골드계열",
+            "베이지계열",
+            "멀티(혼합)컬러",
+            "투명"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "사용계절",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "봄용",
+            "가을용",
+            "봄/가을용",
+            "사계절용",
+            "여름용",
+            "겨울용"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "제조년도",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "23년",
+            "22년",
+            "21년",
+            "20년",
+            "19년",
+            "18년",
+            "17년 이전"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "굽 높이",
+          "dataType": "NUMBER",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "cm",
+          "usableUnits": [
+            "cm"
+          ],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "실내/실외용",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "실내",
+            "실외",
+            "실내외겸용"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "방수 가능여부",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "방수가능"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "사용대상 구분",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "남성용",
+            "여성용",
+            "남녀공용",
+            "아동/유아용"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "신발 소재(겉감)",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "가죽",
+            "인조가죽(합성피혁)",
+            "합성섬유(나일론/폴리에스터)",
+            "EVA",
+            "면/면혼방(캔버스)",
+            "에나멜",
+            "스웨이드",
+            "메시/망사",
+            "젤리/고무",
+            "네오플렌",
+            "퍼",
+            "고어텍스",
+            "레이스",
+            "벨벳",
+            "데님/청"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "신발 종류",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "슬리퍼",
+            "실내화",
+            "부츠",
+            "단화",
+            "운동화",
+            "고무신"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "제품명(신발이름)",
+          "dataType": "STRING",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "신발길이",
+          "dataType": "NUMBER",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "cm",
+          "usableUnits": [
+            "mm",
+            "cm",
+            "m",
+            "km"
+          ],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "출시년월",
+          "dataType": "STRING",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "방수 정도",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "생활방수",
+            "방수"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "패턴/프린트",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "단색(무지)",
+            "스트라이프(줄무늬)",
+            "도트(땡땡이)",
+            "체크/격자무늬",
+            "플라워(꽃무늬)",
+            "카모플라쥬(밀리터리)",
+            "기하학(도형/옵티컬)",
+            "애니멀",
+            "에스닉(민속/이국적)",
+            "페이즐리",
+            "트로피칼(열대과일/선인장)",
+            "캐릭터",
+            "레터링(글씨)"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "모델명/품번",
+          "dataType": "STRING",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "성별",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "여아용",
+            "남아용",
+            "아동공용",
+            "여성용",
+            "남성용",
+            "남여공용"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "기타신발 스타일",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "클로그",
+            "모카신",
+            "에스파드류",
+            "글래디에이터",
+            "토링",
+            "토포스트",
+            "삭스슈즈"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "패션 잡화/슈즈 장식",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "스터드/찡",
+            "퀼팅",
+            "체인",
+            "버클/벨티드",
+            "비즈/스팽글/진주",
+            "팬던트/참",
+            "태슬/수술",
+            "리본",
+            "폼폼/퍼",
+            "지퍼",
+            "끈/레이스업",
+            "벨크로",
+            "브로그",
+            "토글",
+            "패치",
+            "자수",
+            "단추"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "밑창 재질",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "클로저 유형",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "신발 발목높이",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "로우탑",
+            "하이탑"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        }
+      ],
+      "noticeCategories": [
+        {
+          "noticeCategoryName": "어린이제품",
+          "noticeCategoryDetailNames": [
+            {
+              "noticeCategoryDetailName": "품명 및 모델명",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "KC 인증정보",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "크기",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "중량",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "색상",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "재질",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "사용연령 또는 권장사용연령",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "크기∙체중의 한계",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "동일모델의 출시년월",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "제조자(수입자)",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "제조국",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "취급방법 및 취급시 주의사항, 안전표시",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "품질보증기준",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "A/S 책임자와 전화번호",
+              "required": "MANDATORY"
+            }
+          ]
+        },
+        {
+          "noticeCategoryName": "구두/신발",
+          "noticeCategoryDetailNames": [
+            {
+              "noticeCategoryDetailName": "제품의 주소재(운동화인 경우에는 겉감,안감을 구분하여 표시)",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "색상",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "치수",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "제조자(수입자)",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "제조국",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "취급시 주의사항",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "품질보증기준",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "A/S 책임자와 전화번호",
+              "required": "MANDATORY"
+            }
+          ]
+        }
+      ],
+      "requiredDocumentNames": [
+        {
+          "templateName": "기타인증서류",
+          "required": "OPTIONAL"
+        },
+        {
+          "templateName": "수입신고필증(병행수입 선택시)",
+          "required": "MANDATORY_PARALLEL_IMPORTED"
+        },
+        {
+          "templateName": "UN 38.3 Test Report",
+          "required": "MANDATORY_BATTERY_UN_TEST"
+        },
+        {
+          "templateName": "MSDS Test Report",
+          "required": "MANDATORY_BATTERY_MSDS_TEST"
+        },
+        {
+          "templateName": "MANDATORY INGREDIENTS PIC",
+          "required": "MANDATORY_INGREDIENTS_PIC"
+        }
+      ],
+      "certifications": [
+        {
+          "certificationType": "NOT_REQUIRED",
+          "name": "인증대상아님",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "PRESENTED_IN_DETAIL_PAGE",
+          "name": "상세설명에 표시",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "PURCHASED_WITHOUT_KC_MARK",
+          "name": "KC마크 없이 구매대행 가능한 품목",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_KID_CERTIFICATION",
+          "name": "KC인증 어린이제품 안전인증",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_KID_CONFIRM",
+          "name": "KC인증 어린이제품 안전확인",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_KID_PROVIDER",
+          "name": "KC인증 어린이제품 공급자적합성확인",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_ELECTRONICS_CERTIFICATION",
+          "name": "KC인증 전기용품 안전인증",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_ELECTRONICS_CONFIRM",
+          "name": "KC인증 전기용품 안전확인",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_ELECTRONICS_PROVIDER",
+          "name": "KC인증 전기용품 공급자적합성확인",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_HOUSEHOLD_CERTIFICATION",
+          "name": "KC인증 생활용품 안전인증",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_HOUSEHOLD_CONFIRM",
+          "name": "KC인증 생활용품 안전확인",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_HOUSEHOLD_QUALITY",
+          "name": "KC인증 생활용품 공급자적합성확인",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_HOUSEHOLD_PACKAGING",
+          "name": "KC인증 생활용품 어린이보호포장",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "COMMUNICATION_EQUIPMENT",
+          "name": "방송통신기자재 적합성 평가 대상",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+          "name": "생활화학제품 및 살생물제 관련 제품",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KCS_MACHINERY_CERTIFICATION",
+          "name": "[KCs 안전인증] 안전인증대상 기계∙기구 등",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KCS_MACHINERY_CONFIRM",
+          "name": "[KCs 자율안전확인신고] 자율안전확인대상 기계∙기구 등",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "ORGANIC_ECOFRIENDLY_CONFIRM",
+          "name": "유기농/친환경",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_SANITARY_CERTIFICATION",
+          "name": "위생안전기준인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_KITCHEN_WASTE_CERTIFICATION",
+          "name": "주방용오물분쇄기인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "MEDICAL_DEVICE_AD_REVIEW",
+          "name": "의료기기광고심의서",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "MEDICAL_DEVICE_PERMISSION",
+          "name": "의료기기 허가",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "MOBILE_DEVICE_DEALER_PERMIT",
+          "name": "이동통신 사전승낙서",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_AUTOMOTIVE_PARTS_SELF_CERTIFICATION",
+          "name": "자동차 부품 자기 인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_GAS_SUPPLY_CERTIFICATION",
+          "name": "가스용품필증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_OCCUPATIONAL_SAFETY_AND_HEALTH_CERTIFICATION",
+          "name": "산업안전보건 인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_WOOD_PRODUCT_CERTIFICATION",
+          "name": "목재 제품 인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        }
+      ],
+      "allowedOfferConditions": [
+        "NEW"
+      ],
+      "isExpirationDateRequiredForRocketGrowth": false
+    }
+  },
+  "message": "카테고리 68010 메타데이터 조회 성공"
+}

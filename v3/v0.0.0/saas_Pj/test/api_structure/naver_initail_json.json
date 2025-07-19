@@ -1,0 +1,167 @@
+{
+  "success": true,
+  "message": "네이버 등록 프로세스 초기화 완료",
+  "config": {
+    "naverConfig": {
+      "deliveryCompany": "CJGLS",
+      "afterServiceTelephoneNumber": "010-0000-0000",
+      "afterServiceGuideContent": "ㅁㄹ?",
+      "naverpoint": 1000,
+      "claimDeliveryInfo": {
+        "returnDeliveryFee": 5000,
+        "exchangeDeliveryFee": 5000,
+        "shippingAddressId": 107322600,
+        "returnAddressId": 107322599
+      },
+      "purchasePoint": 1000,
+      "reviewPointPolicy": {
+        "textReviewPoint": 1000,
+        "photoVideoReviewPoint": 1000,
+        "afterUseTextReviewPoint": 1000,
+        "afterUsePhotoVideoReviewPoint": 1000,
+        "storeMemberReviewPoint": 2000
+      },
+      "naverCashbackPrice": 1000,
+      "priceSettingLogic": "ai"
+    },
+    "priceConfig": {
+      "minimumMargin": 5000,
+      "minimumProfitMargin": 10,
+      "profitMargin": 20,
+      "deliveryFee": "6000.00",
+      "buyingFee": 2,
+      "importDuty": 8,
+      "importVat": 10,
+      "chinaExchangeRate": 210,
+      "usaExchangeRate": 1400,
+      "minPercentage": 10,
+      "maxPercentage": 30,
+      "includeDeliveryFee": 0,
+      "includeImportDuty": 0
+    },
+    "registerManagement": {
+      "marketNumber": 2
+    },
+    "naverApiAuth": {
+      "clientSecret": "$2a$04$42TMpmK5blW9Ka0K9eWT7O",
+      "clientId": "5mKVGpw7YW09CGXbv0MCRo"
+    }
+  },
+  "initialJsonResult": {
+    "success": true,
+    "message": "InitialJson 함수 모든 단계 완료 - 최종 JSON 생성됨",
+    "initialJson": {
+      "productId": "721963707226",
+      "productName": "산투이 3톤 소형 롤러 ",
+      "naverCategoryId": 50003443,
+      "brandName": "나이키/Nike",
+      "keywords": [
+        "소형롤러",
+        "보행식롤러",
+        "이중스틸휠",
+        "탑승식롤러",
+        "도로장비",
+        "아스팔트롤러",
+        "단일스틸휠",
+        "3톤롤러",
+        "노란색롤러",
+        "1톤롤러"
+      ],
+      "deliveryFee": "6000.00",
+      "images": {
+        "representativeImage": {
+          "url": "https://shop-phinf.pstatic.net/20250527_54/1748278176489LWPGg_JPEG/2383717567371534_2042587066.jpg"
+        },
+        "optionalImages": [
+          {
+            "url": "https://shop-phinf.pstatic.net/20250527_282/1748278175554g3pU2_JPEG/2383716627812592_866283687.jpg"
+          },
+          {
+            "url": "https://shop-phinf.pstatic.net/20250527_172/1748278175850T63t4_JPEG/2383716919910277_1092074975.jpg"
+          },
+          {
+            "url": "https://shop-phinf.pstatic.net/20250527_230/1748278175143trPrI_JPEG/2383716215948940_1971212226.jpg"
+          }
+        ]
+      },
+      "contents": "\n  <div class=\"product-detail-container\" style=\"font-family: 'Noto Sans KR', sans-serif; max-width: 860px; margin: 0 auto; text-align: center; position: relative;\">\n    \n    <div class=\"product-options\" style=\"display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px 0; padding: 15px; border: 1px solid #eee; border-radius: 8px;\"><h3 style=\"width: 100%; text-align: center; margin-bottom: 15px; font-size: 1.3em;\">옵션 정보</h3><div style=\"display: flex; width: 100%; justify-content: space-between; margin-bottom: 15px;\">\n      <div class=\"option-item\" style=\"width: 48%; text-align: center; border: 1px solid #ddd; padding: 10px; border-radius: 5px;\">\n        <img src=\"https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796040357-721963707226-1627207:25155353817-option.jpg\" alt=\"A. 산투이 핸드 가이드 양륜 예약금\" style=\"max-width: 100%; height: auto; margin-bottom: 10px;\">\n        <p style=\"font-weight: bold; margin: 0;\">A. 산투이 핸드 가이드 양륜 예약금</p>\n      </div>\n    \n        <div class=\"option-item\" style=\"width: 48%; text-align: center; border: 1px solid #ddd; padding: 10px; border-radius: 5px;\">\n          <img src=\"https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796041647-721963707226-1627207:25155353818-option.jpg\" alt=\"B. 산투이 1톤 쌍륜 예약금\" style=\"max-width: 100%; height: auto; margin-bottom: 10px;\">\n          <p style=\"font-weight: bold; margin: 0;\">B. 산투이 1톤 쌍륜 예약금</p>\n        </div>\n      </div><div style=\"display: flex; width: 100%; justify-content: space-between; margin-bottom: 15px;\">\n      <div class=\"option-item\" style=\"width: 48%; text-align: center; border: 1px solid #ddd; padding: 10px; border-radius: 5px;\">\n        <img src=\"https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796040987-721963707226-1627207:25155353819-option.jpg\" alt=\"C. 산투이 2톤 쌍륜 예약금\" style=\"max-width: 100%; height: auto; margin-bottom: 10px;\">\n        <p style=\"font-weight: bold; margin: 0;\">C. 산투이 2톤 쌍륜 예약금</p>\n      </div>\n    \n        <div class=\"option-item\" style=\"width: 48%; text-align: center; border: 1px solid #ddd; padding: 10px; border-radius: 5px;\">\n          <img src=\"https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796042255-721963707226-1627207:25155353820-option.jpg\" alt=\"D. 산투이 3톤 쌍륜 예약금\" style=\"max-width: 100%; height: auto; margin-bottom: 10px;\">\n          <p style=\"font-weight: bold; margin: 0;\">D. 산투이 3톤 쌍륜 예약금</p>\n        </div>\n      </div></div>\n    <div class=\"product-description\" style=\"margin: 20px 0;\">\n      <h3 style=\"text-align: center; font-size: 1.5em; margin-bottom: 15px;\">상품 상세 정보</h3>\n      <p style=\"text-align: center; color: #555;\">상품에 대한 자세한 정보는 아래 이미지를 참고해주세요.</p>\n    </div>\n    \n    <div class=\"product-attributes\" style=\"margin: 20px 0;\"><h3 style=\"text-align: center; font-size: 1.3em; margin-bottom: 15px;\">상품 정보</h3><table style=\"width:100%; border-collapse: collapse; margin-top: 10px; border: 1px solid #ddd;\"><tbody>\n      <tr>\n        <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">모델</th>\n        <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">SRD03 C6JS</td>\n      </tr>\n    \n      <tr>\n        <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">브랜드</th>\n        <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이</td>\n      </tr>\n    \n      <tr>\n        <th style=\"padding: 10px; text-align: left; border: 1px solid #ddd; background-color: #f8f8f8; width: 30%;\">색상 분류</th>\n        <td style=\"padding: 10px; text-align: left; border: 1px solid #ddd;\">산추이 핸드 가이드 2륜 예약금, 산추이 1톤 2륜 예약금, 산추이 2톤 2륜 예약금, 산추이 3톤 2륜 예약금, 기타 톤수</td>\n      </tr>\n    </tbody></table></div>\n    \n    \n  </div>",
+      "optionSchema": [
+        {
+          "optionId": "1627207",
+          "optionName": "색상 분류",
+          "optionValues": [
+            {
+              "valueId": "25155353817",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796040357-721963707226-1627207:25155353817-option.jpg",
+              "valueName": "A. 산투이 핸드 가이드 양륜 예약금"
+            },
+            {
+              "valueId": "25155353818",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796041647-721963707226-1627207:25155353818-option.jpg",
+              "valueName": "B. 산투이 1톤 쌍륜 예약금"
+            },
+            {
+              "valueId": "25155353819",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796040987-721963707226-1627207:25155353819-option.jpg",
+              "valueName": "C. 산투이 2톤 쌍륜 예약금"
+            },
+            {
+              "valueId": "25155353820",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796042255-721963707226-1627207:25155353820-option.jpg",
+              "valueName": "D. 산투이 3톤 쌍륜 예약금"
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "stockQuantity": 200,
+          "calculatedPrice": 820350,
+          "cost": 642600,
+          "optionCombination": [
+            {
+              "valueId": "25155353817",
+              "optionId": "1627207"
+            }
+          ]
+        },
+        {
+          "stockQuantity": 200,
+          "calculatedPrice": 820350,
+          "cost": 642600,
+          "optionCombination": [
+            {
+              "valueId": "25155353818",
+              "optionId": "1627207"
+            }
+          ]
+        },
+        {
+          "stockQuantity": 200,
+          "calculatedPrice": 820350,
+          "cost": 642600,
+          "optionCombination": [
+            {
+              "valueId": "25155353819",
+              "optionId": "1627207"
+            }
+          ]
+        },
+        {
+          "stockQuantity": 200,
+          "calculatedPrice": 820350,
+          "cost": 642600,
+          "optionCombination": [
+            {
+              "valueId": "25155353820",
+              "optionId": "1627207"
+            }
+          ]
+        }
+      ],
+      "discountRate": 16
+    }
+  },
+  "userid": 2,
+  "productid": 721963707226
+}

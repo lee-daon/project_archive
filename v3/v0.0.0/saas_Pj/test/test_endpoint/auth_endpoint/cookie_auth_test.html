@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠키 기반 인증 테스트</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #444;
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button.secondary {
+            background-color: #2196F3;
+        }
+        button.secondary:hover {
+            background-color: #0b7dda;
+        }
+        button.danger {
+            background-color: #f44336;
+        }
+        button.danger:hover {
+            background-color: #d32f2f;
+        }
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            overflow: auto;
+            max-height: 300px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .success {
+            color: #4CAF50;
+        }
+        .error {
+            color: #f44336;
+        }
+        .loading {
+            color: #2196F3;
+        }
+        .status {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .code-block {
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .cookie-info {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+        }
+        .debug-info {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #fff3e0;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>쿠키 기반 인증 테스트</h1>
+    
+    <div class="container">
+        <!-- 로그인 카드 -->
+        <div class="card">
+            <h2>로그인</h2>
+            <div class="form-group">
+                <label for="login-id">아이디</label>
+                <input type="text" id="login-id" value="testuser1">
+            </div>
+            <div class="form-group">
+                <label for="login-password">비밀번호</label>
+                <input type="password" id="login-password" value="Test123!@#">
+            </div>
+            <button id="login-btn">로그인 (쿠키 설정)</button>
+            <div class="status" id="login-status"></div>
+            <pre id="login-result"></pre>
+        </div>
+        
+        <!-- 인증 테스트 카드 -->
+        <div class="card">
+            <h2>인증 필요한 API 테스트 (소싱 모듈)</h2>
+            <div class="form-group">
+                <label>테스트 API 엔드포인트</label>
+                <input type="text" id="api-endpoint" value="/src/getstatus/setupinfo">
+            </div>
+            <div class="form-group">
+                <label>유저 ID (URL 쿼리용)</label>
+                <input type="text" id="user-id" value="1">
+            </div>
+            <div class="cookie-info">
+                <p>현재 쿠키 정보:</p>
+                <div id="cookie-display">쿠키 정보 없음</div>
+            </div>
+            <button id="test-auth-btn" class="secondary">인증 테스트</button>
+            <div class="status" id="test-status"></div>
+            <pre id="test-result"></pre>
+            <div class="debug-info" id="debug-info"></div>
+        </div>
+        
+        <!-- 쿠키 관리 카드 -->
+        <div class="card">
+            <h2>쿠키 관리</h2>
+            <button id="view-cookies-btn" class="secondary">쿠키 확인</button>
+            <button id="logout-btn" class="danger">로그아웃 (쿠키 삭제)</button>
+            <div class="status" id="cookie-status"></div>
+            <pre id="cookie-result"></pre>
+            
+            <h3>테스트 도구</h3>
+            <div class="form-group">
+                <label>커스텀 쿠키 설정 (테스트용)</label>
+                <input type="text" id="custom-cookie-name" placeholder="쿠키 이름" value="auth_token">
+                <input type="text" id="custom-cookie-value" placeholder="쿠키 값" style="margin-top: 5px;">
+            </div>
+            <button id="set-cookie-btn" class="secondary">커스텀 쿠키 설정</button>
+        </div>
+    </div>
+
+    <script>
+        // 호스트명 하나로 통일 (localhost 사용)
+        const HOST = window.location.hostname === '127.0.0.1' ? '127.0.0.1' : 'localhost';
+        const PORT = '3000';
+        const BASE_URL = `http://${HOST}:${PORT}`;
+        
+        // API 주소 설정
+        const AUTH_API_URL = `${BASE_URL}/auth`;
+        const API_BASE_URL = BASE_URL;
+        
+        // 디버그 정보 표시
+        document.getElementById('debug-info').innerHTML = `
+            <strong>디버그 정보:</strong><br>
+            현재 URL: ${window.location.href}<br>
+            API 서버: ${BASE_URL}<br>
+            인증 API: ${AUTH_API_URL}<br>
+        `;
+        
+        // DOM 요소
+        const loginBtn = document.getElementById('login-btn');
+        const loginStatus = document.getElementById('login-status');
+        const loginResult = document.getElementById('login-result');
+        
+        const testAuthBtn = document.getElementById('test-auth-btn');
+        const testStatus = document.getElementById('test-status');
+        const testResult = document.getElementById('test-result');
+        
+        const viewCookiesBtn = document.getElementById('view-cookies-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+        const cookieStatus = document.getElementById('cookie-status');
+        const cookieResult = document.getElementById('cookie-result');
+        const cookieDisplay = document.getElementById('cookie-display');
+        
+        const setCookieBtn = document.getElementById('set-cookie-btn');
+        
+        // 쿠키 표시 함수
+        function displayCookies() {
+            const cookies = document.cookie.split(';')
+                .map(cookie => cookie.trim())
+                .filter(cookie => cookie.length > 0);
+            
+            if (cookies.length === 0) {
+                cookieDisplay.textContent = '쿠키 정보 없음';
+                return;
+            }
+            
+            cookieDisplay.innerHTML = cookies.map(cookie => {
+                const [name, value] = cookie.split('=');
+                return `<div class="code-block">${name}: ${value || '(empty)'}</div>`;
+            }).join('');
+            
+            cookieDisplay.innerHTML += `<div class="code-block">(HTTP-only 쿠키는 JavaScript에서 볼 수 없습니다)</div>`;
+        }
+        
+        // 페이지 로드 시 쿠키 표시
+        displayCookies();
+        
+        // 로그인 처리 (쿠키 설정)
+        loginBtn.addEventListener('click', async () => {
+            loginStatus.innerHTML = '<span class="loading">요청 처리 중...</span>';
+            
+            const id = document.getElementById('login-id').value;
+            const password = document.getElementById('login-password').value;
+            
+            if (!id || !password) {
+                loginStatus.innerHTML = '<span class="error">아이디와 비밀번호를 입력해주세요.</span>';
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${AUTH_API_URL}/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ id, password }),
+                    credentials: 'include' // 중요: 쿠키를 주고받기 위해 필요
+                });
+                
+                const data = await response.json();
+                loginResult.textContent = JSON.stringify(data, null, 2);
+                
+                if (response.ok) {
+                    loginStatus.innerHTML = '<span class="success">로그인 성공! 쿠키가 설정되었습니다.</span>';
+                    // 쿠키 표시 업데이트
+                    displayCookies();
+                    
+                    // 로그인 성공 시 자동으로 API 테스트 실행
+                    setTimeout(() => {
+                        console.log('로그인 성공 - 자동으로 API 테스트 실행');
+                        testAuthBtn.click();
+                    }, 1000);
+                } else {
+                    loginStatus.innerHTML = `<span class="error">로그인 실패: ${data.message}</span>`;
+                }
+            } catch (error) {
+                console.error('로그인 오류:', error);
+                loginStatus.innerHTML = '<span class="error">서버 연결 오류</span>';
+                loginResult.textContent = error.toString();
+            }
+        });
+        
+        // 인증이 필요한 API 테스트
+        testAuthBtn.addEventListener('click', async () => {
+            testStatus.innerHTML = '<span class="loading">요청 처리 중...</span>';
+            
+            const endpoint = document.getElementById('api-endpoint').value;
+            const userId = document.getElementById('user-id').value;
+            
+            try {
+                const url = `${API_BASE_URL}${endpoint}${userId ? `?userid=${userId}` : ''}`;
+                console.log('API 요청 URL:', url);
+                
+                const response = await fetch(url, {
+                    method: 'GET',
+                    credentials: 'include', // 중요: 쿠키를 주고받기 위해 필요
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                let data;
+                try {
+                    data = await response.json();
+                } catch (e) {
+                    data = { text: await response.text() };
+                }
+                
+                testResult.textContent = JSON.stringify(data, null, 2);
+                
+                if (response.ok) {
+                    testStatus.innerHTML = '<span class="success">인증 성공! API 응답이 정상적으로 반환되었습니다.</span>';
+                } else {
+                    testStatus.innerHTML = `<span class="error">인증 실패 (${response.status}): ${data.message || '인증에 실패했습니다.'}</span>`;
+                }
+            } catch (error) {
+                console.error('API 테스트 오류:', error);
+                testStatus.innerHTML = '<span class="error">서버 연결 오류</span>';
+                testResult.textContent = error.toString();
+            }
+        });
+        
+        // 쿠키 확인
+        viewCookiesBtn.addEventListener('click', () => {
+            const cookies = document.cookie.split(';')
+                .map(cookie => cookie.trim())
+                .filter(cookie => cookie.length > 0);
+            
+            if (cookies.length === 0) {
+                cookieStatus.innerHTML = '<span class="error">설정된 쿠키가 없습니다.</span>';
+                cookieResult.textContent = '쿠키가 없습니다. (HTTP-only 쿠키는 JavaScript에서 볼 수 없습니다)';
+                return;
+            }
+            
+            cookieStatus.innerHTML = '<span class="success">쿠키가 확인되었습니다.</span>';
+            
+            const cookieObj = {};
+            cookies.forEach(cookie => {
+                const [name, value] = cookie.split('=');
+                cookieObj[name.trim()] = value;
+            });
+            
+            cookieResult.textContent = JSON.stringify(cookieObj, null, 2);
+            cookieResult.textContent += '\n\n(참고: HTTP-only 쿠키는 JavaScript에서 볼 수 없습니다)';
+            
+            // 쿠키 표시 업데이트
+            displayCookies();
+        });
+        
+        // 로그아웃 (쿠키 삭제)
+        logoutBtn.addEventListener('click', () => {
+            // HTTP-only 쿠키는 JavaScript에서 직접 삭제할 수 없으므로
+            // 만료일을 과거로 설정하여 브라우저가 삭제하도록 유도
+            document.cookie = 'auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            
+            cookieStatus.innerHTML = '<span class="success">로그아웃 요청이 처리되었습니다.</span>';
+            cookieResult.textContent = '쿠키가 삭제되었습니다. (참고: HTTP-only 쿠키는 서버에서 처리해야 합니다)';
+            
+            // 쿠키 표시 업데이트
+            displayCookies();
+        });
+        
+        // 커스텀 쿠키 설정 (테스트용)
+        setCookieBtn.addEventListener('click', () => {
+            const cookieName = document.getElementById('custom-cookie-name').value;
+            const cookieValue = document.getElementById('custom-cookie-value').value;
+            
+            if (!cookieName) {
+                cookieStatus.innerHTML = '<span class="error">쿠키 이름을 입력해주세요.</span>';
+                return;
+            }
+            
+            // 쿠키 설정 (30분 만료)
+            const expirationDate = new Date();
+            expirationDate.setTime(expirationDate.getTime() + (30 * 60 * 1000));
+            
+            document.cookie = `${cookieName}=${cookieValue}; expires=${expirationDate.toUTCString()}; path=/;`;
+            
+            cookieStatus.innerHTML = '<span class="success">커스텀 쿠키가 설정되었습니다.</span>';
+            
+            // 쿠키 표시 업데이트
+            displayCookies();
+            
+            // 쿠키 결과 표시
+            viewCookiesBtn.click();
+        });
+    </script>
+</body>
+</html> 

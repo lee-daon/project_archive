@@ -1,0 +1,317 @@
+/* Element Plus 기반 통일된 디자인 시스템 - Modern & Trustworthy Theme */
+
+/* CSS 변수 정의 */
+:root {
+  /* Primary Colors - Element Plus 기본 블루 톤 */
+  --el-color-primary: #409eff;
+  --el-color-success: #28a745;
+  --el-color-warning: #ffc107;
+  --el-color-danger: #dc3545;
+  --el-color-info: #6c757d;
+  
+  /* Primary Variants */
+  --el-color-primary-light-3: #66b1ff;
+  --el-color-primary-light-5: #a0cfff;
+  --el-color-primary-light-7: #c6e2ff;
+  --el-color-primary-light-9: #ecf5ff;
+  --el-color-primary-dark-2: #337ecc;
+  
+  /* Success Variants */
+  --el-color-success-light-3: #5abd5a;
+  --el-color-success-light-7: #c3e6cb;
+  --el-color-success-light-9: #d4edda;
+  --el-color-success-dark-2: #1e7e34;
+  
+  /* Danger Variants */
+  --el-color-danger-light-7: #f5c6cb;
+  --el-color-danger-light-9: #f8d7da;
+  --el-color-danger-dark-2: #721c24;
+  
+  /* Neutral Colors */
+  --el-color-white: #FFFFFF;
+  --el-bg-color: #FFFFFF;
+  --el-bg-color-page: #F9FAFB;
+  --el-bg-color-overlay: #FFFFFF;
+  --el-border-color: #D1D5DB;
+  --el-border-color-light: #E5E7EB;
+  --el-border-color-lighter: #F3F4F6;
+  --el-border-color-extra-light: #F9FAFB;
+  
+  /* Text Colors - 눈에 편안한 회색 톤 */
+  --el-text-color-primary: #1F2937;
+  --el-text-color-regular: #4B5563;
+  --el-text-color-secondary: #6B7280;
+  --el-text-color-placeholder: #9CA3AF;
+  --el-text-color-disabled: #D1D5DB;
+  
+  /* Font */
+  --el-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --el-font-size-extra-large: 20px;
+  --el-font-size-large: 18px;
+  --el-font-size-medium: 16px;
+  --el-font-size-base: 14px;
+  --el-font-size-small: 13px;
+  --el-font-size-extra-small: 12px;
+  
+  /* Font Weights */
+  --el-font-weight-normal: 400;
+  --el-font-weight-medium: 500;
+  --el-font-weight-semibold: 600;
+  --el-font-weight-bold: 700;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* Border Radius */
+  --el-border-radius-base: 6px;
+  --el-border-radius-small: 4px;
+  --el-border-radius-medium: 10px;
+  --el-border-radius-round: 20px;
+  --el-border-radius-circle: 100%;
+  
+  /* Shadow - 더 부드럽고 자연스러운 그림자 */
+  --el-box-shadow-base: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 1px 0 rgba(0, 0, 0, 0.03);
+  --el-box-shadow-dark: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --el-box-shadow-light: 0 2px 4px 0px rgba(0, 0, 0, 0.08), 0 1px 2px 0px rgba(0, 0, 0, 0.03);
+  
+  /* Z-index */
+  --el-index-normal: 1;
+  --el-index-top: 1000;
+  --el-index-popper: 2000;
+}
+
+/* 기본 스타일 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body 스타일 */
+body {
+  font-family: var(--el-font-family);
+  font-size: var(--el-font-size-base);
+  font-weight: var(--el-font-weight-normal);
+  line-height: 1.6;
+  color: var(--el-text-color-primary);
+  background-color: var(--el-bg-color-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 컨테이너 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* 링크 스타일 */
+a {
+  text-decoration: none;
+  color: var(--el-color-primary);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--el-color-primary-light-3);
+}
+
+/* 버튼 기본 스타일 */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+/* 유틸리티 클래스 */
+
+/* 간격 유틸리티 */
+.m-xs { margin: var(--spacing-xs); }
+.m-sm { margin: var(--spacing-sm); }
+.m-md { margin: var(--spacing-md); }
+.m-lg { margin: var(--spacing-lg); }
+.m-xl { margin: var(--spacing-xl); }
+
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+/* 텍스트 유틸리티 */
+.text-primary { color: var(--el-text-color-primary); }
+.text-regular { color: var(--el-text-color-regular); }
+.text-secondary { color: var(--el-text-color-secondary); }
+.text-placeholder { color: var(--el-text-color-placeholder); }
+
+.text-xs { font-size: var(--el-font-size-extra-small); }
+.text-sm { font-size: var(--el-font-size-small); }
+.text-base { font-size: var(--el-font-size-base); }
+.text-md { font-size: var(--el-font-size-medium); }
+.text-lg { font-size: var(--el-font-size-large); }
+.text-xl { font-size: var(--el-font-size-extra-large); }
+
+.font-normal { font-weight: var(--el-font-weight-normal); }
+.font-medium { font-weight: var(--el-font-weight-medium); }
+.font-semibold { font-weight: var(--el-font-weight-semibold); }
+.font-bold { font-weight: var(--el-font-weight-bold); }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* 플렉스 유틸리티 */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-1 { flex: 1; }
+
+/* 배경 유틸리티 */
+.bg-white { background-color: var(--el-bg-color); }
+.bg-page { background-color: var(--el-bg-color-page); }
+.bg-primary { background-color: var(--el-color-primary); }
+.bg-primary-light { background-color: var(--el-color-primary-light-9); }
+
+/* 테두리 유틸리티 */
+.border { border: 1px solid var(--el-border-color); }
+.border-light { border: 1px solid var(--el-border-color-light); }
+.border-lighter { border: 1px solid var(--el-border-color-lighter); }
+.border-none { border: none; }
+.rounded { border-radius: var(--el-border-radius-base); }
+.rounded-sm { border-radius: var(--el-border-radius-small); }
+
+/* 카드 스타일 */
+.card {
+  background: var(--el-bg-color);
+  border-radius: var(--el-border-radius-base);
+  box-shadow: var(--el-box-shadow-base);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--el-border-color-lighter);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--el-box-shadow-light);
+}
+
+/* 페이지 헤더 */
+.page-header {
+  background: var(--el-bg-color);
+  border-bottom: 1px solid var(--el-border-color-lighter);
+  padding: var(--spacing-md) 0;
+  margin-bottom: var(--spacing-lg);
+}
+
+.page-title {
+  font-size: var(--el-font-size-extra-large);
+  font-weight: var(--el-font-weight-bold);
+  color: var(--el-text-color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 반응형 유틸리티 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .hidden-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-sm-and-up {
+    display: none !important;
+  }
+}
+
+/* 애니메이션 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-enter-from {
+  transform: translateX(-100%);
+}
+
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+/* 커스텀 스크롤바 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--el-border-color-extra-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--el-border-color);
+  border-radius: var(--el-border-radius-base);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--el-text-color-secondary);
+}
+
+/* 포커스 스타일 */
+.focus-ring:focus {
+  outline: 2px solid var(--el-color-primary);
+  outline-offset: 2px;
+}
+
+/* 로딩 상태 */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* 상태 표시 */
+.status-success { color: var(--el-color-success); }
+.status-warning { color: var(--el-color-warning); }
+.status-danger { color: var(--el-color-danger); }
+.status-info { color: var(--el-color-info); } 

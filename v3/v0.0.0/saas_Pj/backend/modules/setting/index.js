@@ -1,0 +1,31 @@
+import express from 'express';
+import commonPolicyRouter from './controller/commonPolicy.js';
+import naverPolicyRouter from './controller/NaverPolicy.js';
+import marketSettingRouter from './controller/marketSetting.js';
+import naverAddressBookRouter from './controller/naver-address-book.js';
+import coopangShippingPlaceRouter from './controller/coopangShippingPlace.js';
+import coopangPolicyRouter from './controller/coopangPolicy.js';
+import banWordsRouter from './controller/banWords.js';
+import banSellerRouter from './controller/banSeller.js';
+import detailPageRouter from './controller/detailPage.js';
+import extraSettingRouter from './controller/extraSetting.js';
+import elevenStorePolicyRouter from './controller/elevenStorePolicy.js';
+import elevenStoreAddressRouter from './controller/elevenStoreAddress.js';
+import esmPolicyRouter from './controller/esmPolicy.js';
+const router = express.Router();
+
+router.use('/commonpolicy', commonPolicyRouter);
+router.use('/naverpolicy', naverPolicyRouter);
+router.use('/marketsetting', marketSettingRouter);
+router.use('/naver-address-book', naverAddressBookRouter);
+router.use('/coupang-shipping', coopangShippingPlaceRouter);
+router.use('/coopangpolicy', coopangPolicyRouter);
+router.use('/elevenstorepolicy', elevenStorePolicyRouter);
+router.use('/esm-policy', esmPolicyRouter);
+router.use('/elevenstore-address', elevenStoreAddressRouter);
+router.use('/banwords', banWordsRouter);
+router.use('/ban-seller', banSellerRouter);
+router.use('/detail-page', detailPageRouter);
+router.use('/extra', extraSettingRouter);
+
+export default router; 

@@ -1,0 +1,218 @@
+{
+    "success": true,
+    "data": {
+      "itemId": 885555631269,
+      "title": "美式灰色正肩修身开春穿搭卫衣收腰外套女装春秋2025新款连帽上衣",
+      "description": "<div style=\"width: 750.0px;height: 5264.0px;overflow: hidden;\"><div style=\"width: 750.0px;height: 5264.0px;overflow: hidden;\"><img style=\"display: block;width: 100.0%;\" src=\"https://img.alicdn.com/imgextra/i2/1730270381/O1CN01urak9R1EgXvu90v1A_!!1730270381.jpg\"><img style=\"display: block;width: 100.0%;\" src=\"https://img.alicdn.com/imgextra/i2/1730270381/O1CN01r6rBiq1EgXvwqGzpZ_!!1730270381.jpg\"><img style=\"display: block;width: 100.0%;\" src=\"https://img.alicdn.com/imgextra/i4/1730270381/O1CN015TfM491EgXvwNbPMA_!!1730270381.jpg\"><img style=\"display: block;width: 100.0%;\" src=\"https://img.alicdn.com/imgextra/i3/1730270381/O1CN01tRG6YK1EgXvwJ1YEh_!!1730270381.jpg\"><img style=\"display: block;width: 100.0%;\" src=\"https://img.alicdn.com/imgextra/i2/1730270381/O1CN01IhfbU31EgXvwxpKL2_!!1730270381.jpg\"><img style=\"display: block;width: 100.0%;\" src=\"https://img.alicdn.com/imgextra/i1/1730270381/O1CN01d4DhrH1EgXvwJ0LNI_!!1730270381.jpg\"></div></div>",
+      "shopUrl": "https://shop105432059.taobao.com",
+      "sellerNickName": "裳美阁",
+      "sellerId": "105432059",
+      "price": 299,
+      "promotionPrice": 49.9,
+      "maxPrice": 299,
+      "minPrice": 299,
+      "itemResource": "taobao",
+      "medias": [
+        {
+          "link": "https://img.alicdn.com/bao/uploaded/i4/1730270381/O1CN015TfM491EgXvwNbPMA_!!1730270381.jpg",
+          "isVideo": false
+        },
+        {
+          "link": "https://img.alicdn.com/bao/uploaded/i3/1730270381/O1CN01tRG6YK1EgXvwJ1YEh_!!1730270381.jpg",
+          "isVideo": false
+        },
+        {
+          "link": "https://img.alicdn.com/bao/uploaded/i1/1730270381/O1CN01d4DhrH1EgXvwJ0LNI_!!1730270381.jpg",
+          "isVideo": false
+        },
+        {
+          "link": "https://img.alicdn.com/bao/uploaded/i2/1730270381/O1CN01IhfbU31EgXvwxpKL2_!!1730270381.jpg",
+          "isVideo": false
+        }
+      ],
+      "properties": [
+        {
+          "id": "1627207",
+          "name": "颜色分类",
+          "values": [
+            {
+              "id": "28332",
+              "name": "浅灰色",
+              "imageUrl": "https://img.alicdn.com/bao/uploaded/i4/1730270381/O1CN015TfM491EgXvwNbPMA_!!1730270381.jpg"
+            }
+          ]
+        },
+        {
+          "id": "20509",
+          "name": "尺码",
+          "values": [
+            {
+              "id": "28314",
+              "name": "S 建议75-95斤",
+              "imageUrl": ""
+            },
+            {
+              "id": "28315",
+              "name": "M 建议95-105斤",
+              "imageUrl": ""
+            },
+            {
+              "id": "28316",
+              "name": "L 建议105-115斤",
+              "imageUrl": ""
+            },
+            {
+              "id": "28317",
+              "name": "XL 建议115-130斤",
+              "imageUrl": ""
+            },
+            {
+              "id": "6145171",
+              "name": "2XL 建议130-150斤",
+              "imageUrl": ""
+            }
+          ]
+        }
+      ],
+      "attributies": [
+        {
+          "id": "20000",
+          "name": "品牌",
+          "value": "裳美阁;"
+        },
+        {
+          "id": "20608",
+          "name": "风格",
+          "value": "其他;"
+        },
+        {
+          "id": "122216586",
+          "name": "服装版型",
+          "value": "修身型;"
+        },
+        {
+          "id": "122216588",
+          "name": "流行元素/工艺",
+          "value": "拼接;口袋;"
+        },
+        {
+          "id": "20551",
+          "name": "面料",
+          "value": "其他/other;"
+        },
+        {
+          "id": "2917380",
+          "name": "袖型",
+          "value": "常规;"
+        },
+        {
+          "id": "149422948",
+          "name": "材质成分",
+          "value": "其他材质100%;"
+        },
+        {
+          "id": "20017",
+          "name": "适用年龄",
+          "value": "18-24周岁;"
+        },
+        {
+          "id": "10142888",
+          "name": "组合形式",
+          "value": "单件;"
+        },
+        {
+          "id": "21299",
+          "name": "产地",
+          "value": "中国;"
+        },
+        {
+          "id": "122216507",
+          "name": "厚薄",
+          "value": "常规;"
+        },
+        {
+          "id": "122216347",
+          "name": "上市年份季节",
+          "value": "2025年春季;"
+        },
+        {
+          "id": "122216348",
+          "name": "袖长",
+          "value": "长袖;"
+        },
+        {
+          "id": "20663",
+          "name": "领子",
+          "value": "连帽;"
+        },
+        {
+          "id": "122216562",
+          "name": "衣长",
+          "value": "常规;"
+        },
+        {
+          "id": "31611",
+          "name": "衣门襟",
+          "value": "拉链;"
+        },
+        {
+          "id": "20603",
+          "name": "图案",
+          "value": "纯色;"
+        }
+      ],
+      "skuInfos": [
+        {
+          "id": "5894657702624",
+          "price": 299,
+          "promotionPrice": 49.9,
+          "couponPrice": 40.41,
+          "referenceId": "1627207:28332,20509:28314",
+          "skuPropertyName": "浅灰色;S 建议75-95斤;",
+          "imageUrls": "https://img.alicdn.com/bao/uploaded/i4/1730270381/O1CN015TfM491EgXvwNbPMA_!!1730270381.jpg|",
+          "amountOnSale": 200
+        },
+        {
+          "id": "5894657702625",
+          "price": 299,
+          "promotionPrice": 49.9,
+          "couponPrice": 40.41,
+          "referenceId": "1627207:28332,20509:28315",
+          "skuPropertyName": "浅灰色;M 建议95-105斤;",
+          "imageUrls": "https://img.alicdn.com/bao/uploaded/i4/1730270381/O1CN015TfM491EgXvwNbPMA_!!1730270381.jpg|",
+          "amountOnSale": 200
+        },
+        {
+          "id": "5894657702626",
+          "price": 299,
+          "promotionPrice": 49.9,
+          "couponPrice": 40.41,
+          "referenceId": "1627207:28332,20509:28316",
+          "skuPropertyName": "浅灰色;L 建议105-115斤;",
+          "imageUrls": "https://img.alicdn.com/bao/uploaded/i4/1730270381/O1CN015TfM491EgXvwNbPMA_!!1730270381.jpg|",
+          "amountOnSale": 200
+        },
+        {
+          "id": "5894657702627",
+          "price": 299,
+          "promotionPrice": 49.9,
+          "couponPrice": 40.41,
+          "referenceId": "1627207:28332,20509:28317",
+          "skuPropertyName": "浅灰色;XL 建议115-130斤;",
+          "imageUrls": "https://img.alicdn.com/bao/uploaded/i4/1730270381/O1CN015TfM491EgXvwNbPMA_!!1730270381.jpg|",
+          "amountOnSale": 200
+        },
+        {
+          "id": "5894657702628",
+          "price": 299,
+          "promotionPrice": 49.9,
+          "couponPrice": 40.41,
+          "referenceId": "1627207:28332,20509:6145171",
+          "skuPropertyName": "浅灰色;2XL 建议130-150斤;",
+          "imageUrls": "https://img.alicdn.com/bao/uploaded/i4/1730270381/O1CN015TfM491EgXvwNbPMA_!!1730270381.jpg|",
+          "amountOnSale": 200
+        }
+      ]
+    },
+    "code": 0
+  }

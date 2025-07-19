@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인증 API 테스트</title>
+    <script src="testdata.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #444;
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button.secondary {
+            background-color: #2196F3;
+        }
+        button.secondary:hover {
+            background-color: #0b7dda;
+        }
+        button.danger {
+            background-color: #f44336;
+        }
+        button.danger:hover {
+            background-color: #d32f2f;
+        }
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            overflow: auto;
+            max-height: 300px;
+            margin-top: 15px;
+        }
+        .success {
+            color: #4CAF50;
+        }
+        .error {
+            color: #f44336;
+        }
+        .loading {
+            color: #2196F3;
+        }
+        .status {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .test-data-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .test-data-buttons button {
+            flex: 1;
+            min-width: 120px;
+            margin-top: 0;
+        }
+        .title-with-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .title-with-buttons h2 {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>인증 API 테스트</h1>
+    
+    <div class="container">
+        <!-- 회원가입 카드 -->
+        <div class="card">
+            <div class="title-with-buttons">
+                <h2>회원가입 테스트</h2>
+                <div>
+                    <button class="secondary" id="load-test-data">테스트 데이터 불러오기</button>
+                </div>
+            </div>
+            
+            <div id="test-data-buttons" class="test-data-buttons" style="display: none;">
+                <button class="secondary" id="load-valid-user">유효한 사용자</button>
+                <button class="secondary" id="load-invalid-email">잘못된 이메일</button>
+                <button class="secondary" id="load-invalid-password">잘못된 비밀번호</button>
+                <button class="secondary" id="load-invalid-name">잘못된 이름</button>
+                <button class="secondary" id="load-invalid-id">잘못된 ID</button>
+            </div>
+            
+            <div class="form-group">
+                <label for="signup-id">아이디</label>
+                <input type="text" id="signup-id" placeholder="4글자 이상의 영문/숫자 조합">
+            </div>
+            <div class="form-group">
+                <label for="signup-password">비밀번호</label>
+                <input type="password" id="signup-password" placeholder="8글자 이상, 숫자/문자/특수문자 포함">
+            </div>
+            <div class="form-group">
+                <label for="signup-name">이름</label>
+                <input type="text" id="signup-name" placeholder="숫자가 포함되지 않은 이름">
+            </div>
+            <div class="form-group">
+                <label for="signup-email">이메일</label>
+                <input type="email" id="signup-email" placeholder="유효한 이메일 주소">
+            </div>
+            <button id="signup-btn">회원가입</button>
+            <div class="status" id="signup-status"></div>
+            <pre id="signup-result"></pre>
+        </div>
+
+        <!-- 로그인 카드 -->
+        <div class="card">
+            <h2>로그인 테스트</h2>
+            <div class="form-group">
+                <label for="login-id">아이디</label>
+                <input type="text" id="login-id">
+            </div>
+            <div class="form-group">
+                <label for="login-password">비밀번호</label>
+                <input type="password" id="login-password">
+            </div>
+            <button id="login-btn">로그인</button>
+            <div class="status" id="login-status"></div>
+            <pre id="login-result"></pre>
+        </div>
+        
+        <!-- 사용자 정보 카드 -->
+        <div class="card">
+            <h2>현재 로그인 정보</h2>
+            <div id="user-info">로그인 상태: <span id="login-state">로그인되지 않음</span></div>
+            <pre id="user-details"></pre>
+            <button id="logout-btn" class="danger">로그아웃</button>
+            <div class="status" id="logout-status"></div>
+        </div>
+    </div>
+
+    <script>
+        // 서버 API 주소
+        const API_BASE_URL = 'http://localhost:3000/auth';
+        
+        // DOM 요소
+        const signupBtn = document.getElementById('signup-btn');
+        const signupStatus = document.getElementById('signup-status');
+        const signupResult = document.getElementById('signup-result');
+        
+        const loginBtn = document.getElementById('login-btn');
+        const loginStatus = document.getElementById('login-status');
+        const loginResult = document.getElementById('login-result');
+        
+        const logoutBtn = document.getElementById('logout-btn');
+        const logoutStatus = document.getElementById('logout-status');
+        const loginState = document.getElementById('login-state');
+        const userDetails = document.getElementById('user-details');
+        
+        // 테스트 데이터 관련 요소
+        const loadTestDataBtn = document.getElementById('load-test-data');
+        const testDataButtons = document.getElementById('test-data-buttons');
+        
+        // 테스트 데이터 버튼 토글
+        loadTestDataBtn.addEventListener('click', () => {
+            if (testDataButtons.style.display === 'none') {
+                testDataButtons.style.display = 'flex';
+                loadTestDataBtn.textContent = '테스트 데이터 숨기기';
+            } else {
+                testDataButtons.style.display = 'none';
+                loadTestDataBtn.textContent = '테스트 데이터 불러오기';
+            }
+        });
+        
+        // 테스트 데이터 로드 이벤트 핸들러
+        document.getElementById('load-valid-user').addEventListener('click', () => {
+            const user = window.authTestData.validUsers[0];
+            fillSignupForm(user);
+        });
+        
+        document.getElementById('load-invalid-email').addEventListener('click', () => {
+            const user = window.authTestData.invalidUsers.invalidEmail;
+            fillSignupForm(user);
+        });
+        
+        document.getElementById('load-invalid-password').addEventListener('click', () => {
+            const user = window.authTestData.invalidUsers.invalidPassword;
+            fillSignupForm(user);
+        });
+        
+        document.getElementById('load-invalid-name').addEventListener('click', () => {
+            const user = window.authTestData.invalidUsers.invalidName;
+            fillSignupForm(user);
+        });
+        
+        document.getElementById('load-invalid-id').addEventListener('click', () => {
+            const user = window.authTestData.invalidUsers.invalidId;
+            fillSignupForm(user);
+        });
+        
+        // 폼 채우기 함수
+        function fillSignupForm(userData) {
+            document.getElementById('signup-id').value = userData.id;
+            document.getElementById('signup-password').value = userData.password;
+            document.getElementById('signup-name').value = userData.name;
+            document.getElementById('signup-email').value = userData.email;
+        }
+        
+        // 회원가입 처리
+        signupBtn.addEventListener('click', async () => {
+            signupStatus.innerHTML = '<span class="loading">요청 처리 중...</span>';
+            
+            const id = document.getElementById('signup-id').value;
+            const password = document.getElementById('signup-password').value;
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            
+            if (!id || !password || !name || !email) {
+                signupStatus.innerHTML = '<span class="error">모든 필드를 입력해주세요.</span>';
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/signup`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id,
+                        password,
+                        name,
+                        email
+                    })
+                });
+                
+                const data = await response.json();
+                signupResult.textContent = JSON.stringify(data, null, 2);
+                
+                if (response.ok) {
+                    signupStatus.innerHTML = '<span class="success">회원가입 성공!</span>';
+                    
+                    // 자동으로 로그인 폼에 아이디 입력
+                    document.getElementById('login-id').value = id;
+                } else {
+                    signupStatus.innerHTML = `<span class="error">회원가입 실패: ${data.message}</span>`;
+                }
+            } catch (error) {
+                console.error('회원가입 오류:', error);
+                signupStatus.innerHTML = '<span class="error">서버 연결 오류</span>';
+                signupResult.textContent = error.toString();
+            }
+        });
+        
+        // 로그인 처리
+        loginBtn.addEventListener('click', async () => {
+            loginStatus.innerHTML = '<span class="loading">요청 처리 중...</span>';
+            
+            const id = document.getElementById('login-id').value;
+            const password = document.getElementById('login-password').value;
+            
+            if (!id || !password) {
+                loginStatus.innerHTML = '<span class="error">아이디와 비밀번호를 입력해주세요.</span>';
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id,
+                        password
+                    }),
+                    credentials: 'same-origin'
+                });
+                
+                const data = await response.json();
+                loginResult.textContent = JSON.stringify(data, null, 2);
+                
+                if (response.ok) {
+                    loginStatus.innerHTML = '<span class="success">로그인 성공!</span>';
+                    
+                    // 로그인 상태 업데이트
+                    loginState.textContent = '로그인됨';
+                    userDetails.textContent = JSON.stringify(data.user, null, 2);
+                    
+                    // 로그인 폼 초기화
+                    document.getElementById('login-password').value = '';
+                } else {
+                    loginStatus.innerHTML = `<span class="error">로그인 실패: ${data.message}</span>`;
+                }
+            } catch (error) {
+                console.error('로그인 오류:', error);
+                loginStatus.innerHTML = '<span class="error">서버 연결 오류</span>';
+                loginResult.textContent = error.toString();
+            }
+        });
+        
+        // 로그아웃 처리 (백엔드에 로그아웃 API가 있다면 사용)
+        logoutBtn.addEventListener('click', () => {
+            // 쿠키 삭제 (실제로는 백엔드에서 처리해야 함)
+            document.cookie = 'auth_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            
+            // UI 업데이트
+            loginState.textContent = '로그인되지 않음';
+            userDetails.textContent = '';
+            logoutStatus.innerHTML = '<span class="success">로그아웃 되었습니다.</span>';
+            
+            // 3초 후 상태 메시지 제거
+            setTimeout(() => {
+                logoutStatus.innerHTML = '';
+            }, 3000);
+        });
+    </script>
+</body>
+</html> 

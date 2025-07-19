@@ -1,0 +1,120 @@
+{
+  "success": true,
+  "variants": [
+    {
+      "price": "69.30",
+      "stockQuantity": 200,
+      "optionCombination": [
+        {
+          "valueId": "38347519296",
+          "optionId": "1627207"
+        }
+      ]
+    },
+    {
+      "price": "139.30",
+      "stockQuantity": 200,
+      "optionCombination": [
+        {
+          "valueId": "38347519298",
+          "optionId": "1627207"
+        }
+      ]
+    },
+    {
+      "price": "195.30",
+      "stockQuantity": 200,
+      "optionCombination": [
+        {
+          "valueId": "38347519299",
+          "optionId": "1627207"
+        }
+      ]
+    },
+    {
+      "price": "279.30",
+      "stockQuantity": 200,
+      "optionCombination": [
+        {
+          "valueId": "38347519300",
+          "optionId": "1627207"
+        }
+      ]
+    }
+  ],
+  "productInfo": {
+    "url": "//item.taobao.com/item.htm?id=923281816226",
+    "video": null,
+    "images": [
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114326091_ozs0h1.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114326122_tclu0t.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114326150_cag0g3.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114325968_j2kbsc.jpg"
+    ],
+    "keywords": [
+      "2TB 외장하드",
+      "1TB 외장하드",
+      "고속 외장하드",
+      "대용량 외장하드",
+      "휴대폰 외장하드",
+      "컴퓨터 외장하드",
+      "암호화 하드디스크",
+      "외장 SSD",
+      "휴대용 외장하드",
+      "기계식 하드디스크"
+    ],
+    "brandName": "나이키/Nike",
+    "productId": "923281816226",
+    "attributes": [
+      {
+        "name": "색상 분류",
+        "value": "1TB 블랙 (영화 회원 + 휴대폰 어댑터), 2TB 블랙 (영화 회원 + 휴대폰 어댑터), 4TB 블랙 (영화 회원 + 휴대폰 어댑터), 8TB 블랙 (영화 회원 + 휴대폰 어댑터)"
+      }
+    ],
+    "categoryId": "50003333",
+    "deliveryFee": "0.00",
+    "productName": "2TB 외장 하드 드라이브, 고속 대용량 데이터 저장 장치",
+    "attributes_cut": "색상 분류",
+    "descriptionImages": [
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114325822_xcv9i2.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114326007_gb5p7o.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114327347_3229xg.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114327690_violdz.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114327836_4k2s7w.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114327609_aa7292.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114327881_3qa8pn.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114327922_fnglj1.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114329035_zko91z.jpg",
+      "https://image.loopton.com/raw_image/2025-06/28/image_1751114328806_7n8h28.jpg"
+    ],
+    "representativeImage": "https://image.loopton.com/raw_image/2025-06/28/image_1751114328830_10xent.jpg"
+  },
+  "optionSchema": [
+    {
+      "optionId": "1627207",
+      "optionName": "색상 분류",
+      "optionValues": [
+        {
+          "valueId": "38347519296",
+          "imageUrl": "https://image.loopton.com/raw_image/2025-06/28/image_1751114328830_10xent.jpg",
+          "valueName": "1T 블랙+영화 회원+폰젠더"
+        },
+        {
+          "valueId": "38347519298",
+          "imageUrl": "https://image.loopton.com/raw_image/2025-06/28/image_1751114328830_10xent.jpg",
+          "valueName": "2T 블랙+영화 회원권+폰젠더"
+        },
+        {
+          "valueId": "38347519299",
+          "imageUrl": "https://image.loopton.com/raw_image/2025-06/28/image_1751114328830_10xent.jpg",
+          "valueName": "4T 블랙+영화 회원권+젠더"
+        },
+        {
+          "valueId": "38347519300",
+          "imageUrl": "https://image.loopton.com/raw_image/2025-06/28/image_1751114328830_10xent.jpg",
+          "valueName": "8T 블랙+영화 회원+폰 어댑터"
+        }
+      ]
+    }
+  ]
+}

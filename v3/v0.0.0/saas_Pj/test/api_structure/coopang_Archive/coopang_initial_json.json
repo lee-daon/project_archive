@@ -1,0 +1,121 @@
+ {
+    "jsonData": {
+      "success": true,
+      "variants": [
+        {
+          "price": "3000.00",
+          "stockQuantity": 200,
+          "optionCombination": [
+            {
+              "valueId": "25155353817",
+              "optionId": "1627207"
+            }
+          ]
+        },
+        {
+          "price": "3000.00",
+          "stockQuantity": 200,
+          "optionCombination": [
+            {
+              "valueId": "25155353818",
+              "optionId": "1627207"
+            }
+          ]
+        },
+        {
+          "price": "3000.00",
+          "stockQuantity": 200,
+          "optionCombination": [
+            {
+              "valueId": "25155353819",
+              "optionId": "1627207"
+            }
+          ]
+        },
+        {
+          "price": "3000.00",
+          "stockQuantity": 200,
+          "optionCombination": [
+            {
+              "valueId": "25155353820",
+              "optionId": "1627207"
+            }
+          ]
+        }
+      ],
+      "productInfo": {
+        "url": "//item.taobao.com/item.htm?id=721963707226",
+        "video": null,
+        "images": [
+          "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843777-721963707226-1-main.jpg",
+          "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794843262-721963707226-2-main.jpg",
+          "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794840295-721963707226-0-main.jpg"
+        ],
+        "keywords": [
+          "소형 롤러",
+          "보행식 롤러",
+          "탑승식 롤러",
+          "유압식 롤러",
+          "아스팔트 롤러",
+          "트렌치 롤러",
+          "단일 스틸 휠",
+          "이중 스틸 휠",
+          "3톤 롤러",
+          "1톤 롤러",
+          "노란색 롤러",
+          "건설 장비",
+          "도로 장비"
+        ],
+        "brandName": "나이키/Nike",
+        "productId": "721963707226",
+        "attributes": [
+          {
+            "name": "모델",
+            "value": "SRD03 C6JS"
+          },
+          {
+            "name": "브랜드",
+            "value": "산추이"
+          },
+          {
+            "name": "색상 분류",
+            "value": "산추이 핸드 가이드 2륜 예약금, 산추이 1톤 2륜 예약금, 산추이 2톤 2륜 예약금, 산추이 3톤 2륜 예약금, 기타 톤수"
+          }
+        ],
+        "categoryId": "127742003",
+        "deliveryFee": "0.00",
+        "productName": "산투이 3톤 소형 롤러 ",
+        "attributes_cut": "모델 / 브랜드 / 색상 분류",
+        "descriptionImages": [],
+        "representativeImage": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747794844927-721963707226-4-main.jpg"
+      },
+      "optionSchema": [
+        {
+          "optionId": "1627207",
+          "optionName": "색상 분류",
+          "optionValues": [
+            {
+              "valueId": "25155353817",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796040357-721963707226-1627207:25155353817-option.jpg",
+              "valueName": "산투이 핸드 가이드 양륜 예약금"
+            },
+            {
+              "valueId": "25155353818",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796041647-721963707226-1627207:25155353818-option.jpg",
+              "valueName": "산투이 1톤 쌍륜 예약금"
+            },
+            {
+              "valueId": "25155353819",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796040987-721963707226-1627207:25155353819-option.jpg",
+              "valueName": "산투이 2톤 쌍륜 예약금"
+            },
+            {
+              "valueId": "25155353820",
+              "imageUrl": "https://pub-b852f1bb5d3a419d93134a68870b6ea5.r2.dev/translated/1747796042255-721963707226-1627207:25155353820-option.jpg",
+              "valueName": "산투이 3톤 쌍륜 예약금"
+            }
+          ]
+        }
+      ]
+    }
+  }

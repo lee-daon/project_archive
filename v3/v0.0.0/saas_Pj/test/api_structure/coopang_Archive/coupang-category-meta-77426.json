@@ -1,0 +1,598 @@
+{
+  "success": true,
+  "data": {
+    "code": "SUCCESS",
+    "message": "",
+    "data": {
+      "isAllowSingleItem": false,
+      "attributes": [
+        {
+          "attributeTypeName": "퍼즐/블럭 조각 수",
+          "dataType": "NUMBER",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "개",
+          "usableUnits": [
+            "조각"
+          ],
+          "required": "MANDATORY",
+          "groupNumber": "NONE",
+          "exposed": "EXPOSED"
+        },
+        {
+          "attributeTypeName": "색상",
+          "dataType": "STRING",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "MANDATORY",
+          "groupNumber": "NONE",
+          "exposed": "EXPOSED"
+        },
+        {
+          "attributeTypeName": "수량",
+          "dataType": "NUMBER",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "개",
+          "usableUnits": [
+            "개",
+            "세트",
+            "박스"
+          ],
+          "required": "MANDATORY",
+          "groupNumber": "NONE",
+          "exposed": "EXPOSED"
+        },
+        {
+          "attributeTypeName": "입체퍼즐 종류",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "교통수단",
+            "건물",
+            "캐릭터",
+            "동물"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "퍼즐 재질",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "종이",
+            "목재",
+            "메탈",
+            "플라스틱",
+            "벨벳",
+            "콜크"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "최소 연령",
+          "dataType": "NUMBER",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "개월",
+          "usableUnits": [
+            "세",
+            "개월"
+          ],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "높이",
+          "dataType": "NUMBER",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "cm",
+          "usableUnits": [
+            "mm",
+            "cm",
+            "m",
+            "km"
+          ],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "사용대상",
+          "dataType": "STRING",
+          "inputType": "SELECT",
+          "inputValues": [
+            "여성용",
+            "남성용",
+            "남녀공용",
+            "유아용",
+            "여아용",
+            "남아용",
+            "아동공용",
+            "어린이용",
+            "청소년용",
+            "해당없음",
+            "커트연습용",
+            "임산부",
+            "범용",
+            "가발전용",
+            "공용",
+            "온가족",
+            "남녀노소",
+            "성인",
+            "모든 연령대"
+          ],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        },
+        {
+          "attributeTypeName": "구성품",
+          "dataType": "STRING",
+          "inputType": "INPUT",
+          "inputValues": [],
+          "basicUnit": "없음",
+          "usableUnits": [],
+          "required": "OPTIONAL",
+          "groupNumber": "NONE",
+          "exposed": "NONE"
+        }
+      ],
+      "noticeCategories": [
+        {
+          "noticeCategoryName": "기타 재화",
+          "noticeCategoryDetailNames": [
+            {
+              "noticeCategoryDetailName": "품명 및 모델명",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "인증/허가 사항",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "제조국(원산지)",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "제조자(수입자)",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "소비자상담 관련 전화번호",
+              "required": "MANDATORY"
+            }
+          ]
+        },
+        {
+          "noticeCategoryName": "어린이제품",
+          "noticeCategoryDetailNames": [
+            {
+              "noticeCategoryDetailName": "품명 및 모델명",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "KC 인증정보",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "크기",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "중량",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "색상",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "재질",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "사용연령 또는 권장사용연령",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "크기∙체중의 한계",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "동일모델의 출시년월",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "제조자(수입자)",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "제조국",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "취급방법 및 취급시 주의사항, 안전표시",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "품질보증기준",
+              "required": "MANDATORY"
+            },
+            {
+              "noticeCategoryDetailName": "A/S 책임자와 전화번호",
+              "required": "MANDATORY"
+            }
+          ]
+        }
+      ],
+      "requiredDocumentNames": [
+        {
+          "templateName": "기타인증서류",
+          "required": "OPTIONAL"
+        },
+        {
+          "templateName": "수입신고필증(병행수입 선택시)",
+          "required": "MANDATORY_PARALLEL_IMPORTED"
+        },
+        {
+          "templateName": "UN 38.3 Test Report",
+          "required": "MANDATORY_BATTERY_UN_TEST"
+        },
+        {
+          "templateName": "MSDS Test Report",
+          "required": "MANDATORY_BATTERY_MSDS_TEST"
+        },
+        {
+          "templateName": "MANDATORY INGREDIENTS PIC",
+          "required": "MANDATORY_INGREDIENTS_PIC"
+        }
+      ],
+      "certifications": [
+        {
+          "certificationType": "NOT_REQUIRED",
+          "name": "인증대상아님",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "PRESENTED_IN_DETAIL_PAGE",
+          "name": "상세설명에 표시",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "PURCHASED_WITHOUT_KC_MARK",
+          "name": "KC마크 없이 구매대행 가능한 품목",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_KID_CERTIFICATION",
+          "name": "KC인증 어린이제품 안전인증",
+          "dataType": "CODE",
+          "required": "RECOMMEND",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_KID_CONFIRM",
+          "name": "KC인증 어린이제품 안전확인",
+          "dataType": "CODE",
+          "required": "RECOMMEND",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_KID_PROVIDER",
+          "name": "KC인증 어린이제품 공급자적합성확인",
+          "dataType": "NONE",
+          "required": "RECOMMEND",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_ELECTRONICS_CERTIFICATION",
+          "name": "KC인증 전기용품 안전인증",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_ELECTRONICS_CONFIRM",
+          "name": "KC인증 전기용품 안전확인",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_ELECTRONICS_PROVIDER",
+          "name": "KC인증 전기용품 공급자적합성확인",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_HOUSEHOLD_CERTIFICATION",
+          "name": "KC인증 생활용품 안전인증",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_HOUSEHOLD_CONFIRM",
+          "name": "KC인증 생활용품 안전확인",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_HOUSEHOLD_QUALITY",
+          "name": "KC인증 생활용품 공급자적합성확인",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_HOUSEHOLD_PACKAGING",
+          "name": "KC인증 생활용품 어린이보호포장",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "COMMUNICATION_EQUIPMENT",
+          "name": "방송통신기자재 적합성 평가 대상",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+          "name": "생활화학제품 및 살생물제 관련 제품",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KCS_MACHINERY_CERTIFICATION",
+          "name": "[KCs 안전인증] 안전인증대상 기계∙기구 등",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KCS_MACHINERY_CONFIRM",
+          "name": "[KCs 자율안전확인신고] 자율안전확인대상 기계∙기구 등",
+          "dataType": "CODE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "ORGANIC_ECOFRIENDLY_CONFIRM",
+          "name": "유기농/친환경",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_SANITARY_CERTIFICATION",
+          "name": "위생안전기준인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_KITCHEN_WASTE_CERTIFICATION",
+          "name": "주방용오물분쇄기인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "MEDICAL_DEVICE_AD_REVIEW",
+          "name": "의료기기광고심의서",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "MEDICAL_DEVICE_PERMISSION",
+          "name": "의료기기 허가",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "MOBILE_DEVICE_DEALER_PERMIT",
+          "name": "이동통신 사전승낙서",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_AUTOMOTIVE_PARTS_SELF_CERTIFICATION",
+          "name": "자동차 부품 자기 인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_GAS_SUPPLY_CERTIFICATION",
+          "name": "가스용품필증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_OCCUPATIONAL_SAFETY_AND_HEALTH_CERTIFICATION",
+          "name": "산업안전보건 인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        },
+        {
+          "certificationType": "KC_WOOD_PRODUCT_CERTIFICATION",
+          "name": "목재 제품 인증",
+          "dataType": "NONE",
+          "required": "OPTIONAL",
+          "verification_OMIT_LIST": [
+            "COMMUNICATION_EQUIPMENT",
+            "CONSUMER_CHEMICAL_PRODUCTS_AND_BIOCIDES",
+            "KCS_MACHINERY_CERTIFICATION",
+            "KCS_MACHINERY_CONFIRM"
+          ]
+        }
+      ],
+      "allowedOfferConditions": [
+        "NEW"
+      ],
+      "isExpirationDateRequiredForRocketGrowth": false
+    }
+  },
+  "message": "카테고리 77426 메타데이터 조회 성공"
+}
